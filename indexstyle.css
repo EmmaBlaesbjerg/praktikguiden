@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.image{
+	background-image: url("images/index/forside.png");
+	height: 100vh;
+	background-size: cover;
+	background-position: center center;
+	margin: 20px;
+}

@@ -1,8 +1,27 @@
-@charset "UTF-8";
+@charset "utf-8";
 /* CSS Document */
+*, *::before, *::after {
+  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background: white;
+}
+header {
+  text-align: center;
+  z-index: 999;
+	
+  width: 100%;
+	box-shadow: 1px 1px 5px 1px grey;
+}
+
 /* Dette er header billedet */
 .hero-image {
-	background-image: url("../img/application.png");
+	background-image: url("../images/Uddannelse/uddannelse.png");
 	background-size: contain;
 	width: 1000px;
 	height: 70vh;
@@ -120,3 +139,4 @@ footer {
 	height: 150px;
 	margin-top: 40px;
 }
+

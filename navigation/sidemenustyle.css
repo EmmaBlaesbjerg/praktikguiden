@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Menu kassen der fixed sidder i siden */
+aside {
+	position: fixed;
+	width: 100px;
+	height: auto;
+	text-align: center;
+	outline: 0.5px solid gray;
+	box-shadow: 1px 1px 1px 1px gray;
+	line-height: 1.5;
+	
+}
+aside a {
+	color: black;
+	font-size: 1em;
+	margin: 10px;
+}

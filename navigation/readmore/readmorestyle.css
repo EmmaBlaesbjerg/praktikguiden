@@ -1,3 +1,17 @@
 @charset "UTF-8";
 /* CSS Document */
-#more {display: none;}
+
+.toggle-text {
+  display: none;
+}
+
+.toggle-text-button{
+	border: solid #4EB2D6;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: black;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+}

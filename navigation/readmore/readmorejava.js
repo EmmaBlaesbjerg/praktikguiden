@@ -1,17 +1,26 @@
 // JavaScript Document
 
-function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
+// Add click event dynamically
+$(document).on("click", ".toggle-text-button", function() {
 
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
-    moreText.style.display = "none";
+  // Check if text is more or less
+  if ($(this).text() == "Read More") {
+
+    // Change link text
+    $(this).text("Read Less");
+    
+    // Travel up DOM tree to parent, then find any children with CLASS .toggle-text and slide down
+    $(this).parent().children(".toggle-text").slideDown();
+    
   } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
-    moreText.style.display = "inline";
+
+
+    // Change link text
+    $(this).text("Read More");
+    
+    // Travel up DOM tree to parent, then find any children with CLASS .toggle-text and slide up 
+    $(this).parent().children(".toggle-text").slideUp();
+    
   }
-}
+  
+});

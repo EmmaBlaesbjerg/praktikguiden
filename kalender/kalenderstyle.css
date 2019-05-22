@@ -61,7 +61,6 @@ section {
 }
 .right {
     position: absolute;
-    right: : 0;
     z-index: 2;
     -webkit-transform: rotate(-10deg) translate(7px, 8px);
     -moz-transform: rotate(-10deg) translate(7px, 8px);

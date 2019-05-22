@@ -2,9 +2,13 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap');
 /* CSS Document */
 
-
 *, *::before, *::after {
   box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 /* navigation styles start here */
 header {
@@ -14,6 +18,7 @@ header {
   z-index: 1;
   width: 100%;
 	top: 0;
+	font-family: 'Open Sans', sans-serif;
 }
 /* changed this from the tutorial video to
    allow it to gain focus, making it tabbable */
@@ -27,8 +32,8 @@ header {
 }
 .nav-toggle-label {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 1px;
+  right: 0;
   margin-left: 1em;
   height: 0%;
   display: flex;
@@ -156,9 +161,7 @@ nav a:hover {
   nav a:hover::before {
     transform: scale(1,1);
   }
-=======
-@charset "UTF-8";
-/* CSS Document */
+
 
 .header {
   background: white;

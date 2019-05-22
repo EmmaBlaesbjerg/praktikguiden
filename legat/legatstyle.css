@@ -3,7 +3,12 @@
 /* CSS Document */
 /* Dette er header billedet */
 body{
-	font: 15px open sans;
+	font-family: 'Open Sans', sans-serif;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 .hero-image {
 	background-image: url("../images/Legat/legat.png");
@@ -19,7 +24,7 @@ body{
 .hero-h1 {
 	
 	position: absolute;
-	top:30%;
+	top: 350px;
 	left:20%;
 	font: 5em open sans;
 	
@@ -28,10 +33,10 @@ body{
 	font-family: 'CustomFont', blankid;
 	font-weight:normal;
 	font-style:normal;
-	font-size: 5em;
+	font-size: 4em;
 
 	position: absolute;
-	top:40%;
+	top: 450px;
 	left:20%;
 	
 }

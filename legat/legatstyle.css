@@ -25,7 +25,10 @@ body{
 	
 }
 .hero-h2 {
-	font-size: 5em;
+	font-family: 'CustomFont', blankid;
+	font-weight:normal;
+	font-style:normal;
+
 	position: absolute;
 	top:35%;
 	left:20%;

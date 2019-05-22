@@ -17,20 +17,21 @@ body{
 	top: 0;
 }
 .hero-h1 {
-	font-size: 5em;
+	
 	position: absolute;
 	top:30%;
 	left:20%;
-	font: blankid;
+	font: 5em open sans;
 	
 }
 .hero-h2 {
 	font-family: 'CustomFont', blankid;
 	font-weight:normal;
 	font-style:normal;
+	font-size: 5em;
 
 	position: absolute;
-	top:35%;
+	top:40%;
 	left:20%;
 	
 }

@@ -19,6 +19,8 @@
 	animation: chatbot 0.7s;
 	z-index: 2;
 }
+
+
 /* Dette for chatbot til at poppe frem fra 0.5 i scale til 1 i scale */
 @keyframes chatbot {
   0% {
@@ -28,10 +30,7 @@
     transform: scale(1);
   }
 }
-		
-		
-/* ====== */ 
-		
+	
 		/* velkommen til praktikguiden */
 		.velkomstTekst {
 			max-width: 250px;
@@ -48,6 +47,23 @@
 		/* Selve chatbot delen */
 .box {
  margin: 0 auto;
+}
+/* maskot billede i chatbot */ 
+.box img {
+	height: 220px;
+	width: auto;
+	position: absolute;
+	padding: 10px;
+	
+}
+/* chatbot h1 */
+.box h1 {
+    max-width: 200px;
+    margin: 0 auto;
+    color: white;
+    font-size: 2.5em;
+    letter-spacing: 10px;
+    font-family: open sans;
 }
 
 /* input feltet */
@@ -68,7 +84,14 @@ input {
 .textbox {
     max-width: 300px;
     margin: 10px;
+	margin-left: 6.5em;
 	
+}
+
+#textfelt{
+	
+	margin: 10px;
+	margin-left: 6.5em;
 }
 #magictekst {
     padding: .5em;
@@ -99,4 +122,3 @@ input {
 		button .material-icons {
 			vertical-align: middle;
 		}
-

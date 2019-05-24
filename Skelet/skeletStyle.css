@@ -1,0 +1,221 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap');
+/* CSS Document */
+*, *::before, *::after {
+  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background: white;
+	font-family: Open Sans;
+}
+
+/* Her rammes classerne i content diven, så vi kan bygge griddet */
+/* Hvis man tilføjer flere kasser i htmlen - husk derfor at tilføje dem herunder også. */
+.a {grid-area: a;}
+.b {grid-area: b;}
+.c {grid-area: c;}
+.d {grid-area: d;}
+.e {grid-area: e;}
+.f {grid-area: f;}
+.g {grid-area: g;}
+.h {grid-area: h;}
+.i {grid-area: i;}
+.j {grid-area: j;}
+.k {grid-area: k;}
+.l {grid-area: l;}
+.m {grid-area: m;}
+.n {grid-area: n;}
+.o {grid-area: o;}
+.p {grid-area: p;}
+.q {grid-area: q;}
+.r {grid-area: r;}
+.s {grid-area: s;}
+.t {grid-area: t;}
+
+/* ====== */
+/* ============== */
+
+/* Dette er til når skærmen er under 760px, så går vi ned til 1 column til telefon view */
+.content {
+	padding-top: 100px;
+	
+	display: grid;
+	grid-template-columns: 100px 1fr 1fr 0px;
+	grid-auto-rows: auto;
+	grid-gap: 50px;
+	grid-template-areas:
+		"aside a a"
+		"aside b b"
+		"aside c c"
+		"aside d d"
+		"aside e e"
+		"aside f f"
+		"aside g g"
+		"aside h h"
+		"aside i i"
+		"aside j j"
+		"aside k k"
+		"aside l l"
+		"aside m m"
+		"aside n n"
+		"aside o o"
+		"aside p p"
+		"aside q q"
+		"aside r r"
+		"aside s s"
+		"aside t t";
+
+}
+p{
+		width: 180px;
+	}
+
+/* Her sørger vi får at der kommer 2 columns når skærmen er mindst 760 px stor */
+@media screen and (min-width: 760px){
+.content {
+	display: grid;
+	grid-template-columns: 160px 2fr 2fr 100px;
+	padding: 100px 6%;
+	grid-column-gap: 100px;
+	font-size: 16px;
+	grid-auto-rows: auto;
+	margin: 0 auto;
+	grid-template-areas: /* Hvis der bliver tilføjet flere kasser i html, husk at tilføje i grid-area sektion, og tilføj herunder i grid-template-area også, så der er styr på hvordan det hele ser ud*/
+		"aside a b ."
+		"aside c d ."
+		"aside e f ."
+		"aside g h ."
+		"aside i j ."
+		"aside k l ."
+		"aside m n ."
+		"aside o p ."
+		"aside q r ."
+		"aside s t .";
+
+}
+
+	p{
+		width: auto;
+	}
+
+
+	}
+
+
+/* Dette er header billedet */
+/* The hero image */
+.hero-image {
+  
+	background-size: contain;
+	width: 100%;
+	max-width: 1000px;
+	height: 70vh;
+	align-content: left;
+	background-repeat: no-repeat;
+	margin-right: 50%;
+	padding-right: 0.5%;
+	margin-top: 0px;
+	margin-left: 820px;
+}
+
+
+@media screen and (max-width: 760px){
+	.hero-image {
+		width: 500px;
+		height: 50vh;
+		background-position: right center;
+		margin: 0 auto;
+		top: 0px;
+		margin-top: 0px;
+	}
+	.hero-h1 {
+		font-size: 3rem;
+		top: 20%;
+		right:25%;
+	}
+	.hero-h3 {
+		font-size: 2.4rem;
+		top: 11.5%;
+		right:25%;
+	}
+}
+@media screen and (max-width: 600px){
+	.hero-image {
+		width: auto;
+		background-position: center center;
+		margin: 0% 5%;
+	}
+		.hero-h1 {
+		font-size: 2.2em;
+		max-width: 100px;
+		top:45%;
+		left: 5%;
+	}
+	.hero-h3 {
+		font-size: 2.2em;
+		top: 42%;
+		left:5%;
+	}
+	h2 {
+		font-size: 1.3em;
+	}
+}
+
+
+
+
+
+
+/* ======== */
+
+/* billederne ved hver sektion */
+.a img, .d img {
+	height: 250px;
+	width: auto;
+}
+@media screen and (max-width: 470px){
+	.a img, .d img {
+		height: 160px;
+		width: auto;
+	}
+}/* ======*/
+.item.a, .item.d{
+	text-align: center;
+}
+
+
+		/*=====*/
+
+/* See More See Less knap */
+.toggle-text {
+  display: none;
+}
+
+.toggle-text-button{
+	border: solid lightgrey 1px;
+    display: inline-block;
+    padding: 8px;
+    color: black;
+    
+    text-align: center;
+	margin: 5%;
+	border-radius: 10%;
+    
+}
+.toggle-text-button:hover{
+	background: lightgrey;
+}
+
+/*  ========== */
+
+footer {
+	background: #E1E0DB;
+	height: 150px;
+	margin-top: 40px;
+}
+

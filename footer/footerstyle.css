@@ -11,10 +11,14 @@
 
 /* On our website, the footers are fixed to the bottom of the page */
 
-footer{
-	position: absolute;
-	bottom: 0;
-	z-index: 300;
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   margin-bottom: 2px;
+   text-align: center;
+	margin-color: lightgrey;
 }
 
 @media (max-height:800px){
@@ -31,9 +35,12 @@ footer{
 	text-align: left;
 	font: bold 16px sans-serif;
 
-	padding: 55px 50px;
+	padding: 0px 50px;
+	padding-top: 10px;
 	margin-top: 80px;
+	margin-bottom: 10px;
 }
+
 
 .footer-distributed .footer-left,
 .footer-distributed .footer-center,
@@ -68,6 +75,7 @@ footer{
 	line-height: 1.8;
 	text-decoration: none;
 	color:  #8f9296;
+	
 }
 
 .footer-distributed .footer-company-name{
@@ -116,7 +124,7 @@ footer{
 }
 
 .footer-distributed .footer-center p a{
-	color:  #5383d3;
+	color:  #ffffffff;
 	text-decoration: none;;
 }
 
@@ -164,7 +172,7 @@ footer{
 	margin-bottom: 5px;
 }
 
-/* If you don't want the footer to be responsive, remove these media queries */
+/* Responsive */
 
 @media (max-width: 880px) {
 

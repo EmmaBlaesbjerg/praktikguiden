@@ -1,192 +1,39 @@
-@charset "UTF-8";
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap');
-/* CSS Document */
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-*, *::before, *::after {
-  box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-}
-/* navigation styles start here */
+/*Navigation*/
 header {
   background: white;
   text-align: center;
- 
-  width: 100%;
-	top: 0;
-	font-family: 'Open Sans', sans-serif;
-}
-/* changed this from the tutorial video to
-   allow it to gain focus, making it tabbable */
-.nave-toggle {
-  position: absolute !important;
-  top: -9999px !important;
-  left: -9999px !important;
-}
-.nave-toggle:focus ~ .nave-toggle-label {
-  outline: 3px solid rgba(lightblue, .75);
-}
-.nave-toggle-label {
-  position: absolute;
-  top: 1px;
-  right: 0;
-  margin-left: 1em;
-  height: 0%;
-  display: flex;
-  align-items: center;
-}
-.nave-toggle-label span,
-.nave-toggle-label span::before,
-.nave-toggle-label span::after {
-  display: block;
-  background: black;
-  height: 2px;
-  width: 2em;
-  border-radius: 2px;
-  position: relative;
-}
-.nave-toggle-label span::before,
-.nave-toggle-label span::after {
-  content: '';
-  position: absolute;
-}
-.nave-toggle-label span::before {
-  bottom: 7px;
-}
-.nave-toggle-label span::after {
-  top: 7px;
-}
-.nave {
-  position: absolute;
-  text-align: left;
-  top: 100%;
-  left: 0;
-  background: white;
-  width: 100%;
-  transform: scale(1, 0);
-  transform-origin: top;
-  transition: transform 400ms ease-in-out;
-	font: 15px open sans;
-}
-.nave ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.nave li {
-  margin-bottom: 1em;
-  margin-left: 1em;
-}
-.nave a {
-  color: black;
-  text-decoration: none;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  opacity: 0;
-  transition: opacity 150ms ease-in-out;
-}
-.nave a:hover {
-  color: black;
-}
-.nave-toggle:checked ~ nav {
-  transform: scale(1,1);
-}
-.nave-toggle:checked ~ nav a {
-  opacity: 1;
-  transition: opacity 250ms ease-in-out 250ms;
-}
-@media screen and (min-width: 800px) {
-  .nave-toggle-label {
-    display: none;
-  }
-  header {
-    display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
-  }
-  
-  .logo {
-    grid-column: 2 / 3;
-  }
-  
-  .nave {
-    // all: unset; /* this causes issues with Edge, since it's unsupported */
-    
-    /* the following lines are not from my video, but add Edge support */
-    position: relative;
-    text-align: left;
-    transition: none;
-    transform: scale(1,1);
-    background: none;
-    top: initial;
-    left: initial;
-    /* end Edge support stuff */
-    
-    grid-column: 3 / 4;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  
-  .nave ul {
-    display: flex;
-  }
-  
-  .nave li {
-    margin-left: 3em;
-    margin-bottom: 0;
-  }
-  
-  .nave a {
-    opacity: 1;
-    position: relative;
-  }
-  
-  .nave a::before {
-    content: '';
-    display: block;
-    height: 5px;
-    background: black;
-    position: absolute;
-    bottom: -.75em;
-    left: 0;
-    right: 0;
-    transform: scale(0, 1);
-    transition: transform ease-in-out 250ms;
-  }
-  
-  .nave a:hover::before {
-    transform: scale(1,1);
-  }
-
-
-.header {
-  background: white;
-  text-align: center;
   z-index: 999;
-  position: fixed;
+top:0%;
   width: 100%;
-  box-shadow: 1px 1px 10px 1px grey;
-	display: block;
+	box-shadow: 1px 1px 5px 1px lightgrey;
 }
-
+@media screen and (max-width: 760px) {
+	header {
+		position: fixed;
+		height: 55px;
+		width: 200px;
+		box-shadow: none;
+		background-color: transparent;
+	}
+	.logo {
+		display: none;
+	}
+}
 .logo img{
 	height: 80px;
 	width: auto;
 }
-.nave-toggle {
+.nav-toggle {
   position: absolute !important;
   top: -9999px !important;
   left: -9999px !important;
 }
 
-.nave-toggle:focus ~ .nave-toggle-label {
+.nav-toggle:focus ~ .nav-toggle-label {
   outline: 3px solid rgba(lightblue, .75);
 }
 
-.nave-toggle-label {
+.nav-toggle-label {
   position: absolute;
   top: 0;
   left: 0;
@@ -196,9 +43,9 @@ header {
   align-items: center;
 }
 
-.nave-toggle-label span,
-.nave-toggle-label span::before,
-.nave-toggle-label span::after {
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
   display: block;
   background: black;
   height: 2px;
@@ -207,21 +54,21 @@ header {
   position: relative;
 }
 
-.nave-toggle-label span::before,
-.nave-toggle-label span::after {
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
   content: '';
   position: absolute;
 }
 
-.nave-toggle-label span::before {
+.nav-toggle-label span::before {
   bottom: 7px;
 }
 
-.nave-toggle-label span::after {
+.nav-toggle-label span::after {
   top: 7px;
 }
 
-.nave {
+nav {
   position: absolute;
   text-align: left;
   top: 100%;
@@ -233,55 +80,70 @@ header {
   transition: transform 400ms ease-in-out;
 }
 
-.nave ul {
+nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+@media screen and (max-width: 1300px) {
+	nav ul {
+		max-width: 600px;
+	}
 
-.nave li {
+}
+
+nav li {
   margin-bottom: 1em;
   margin-left: 1em;
 }
 
-.nave a {
+nav a {
   color: black;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   opacity: 0;
   transition: opacity 150ms ease-in-out;
 }
-
-.nave a:hover {
+@media screen and (max-width: 1300px) {
+	nav a {
+		font-size: 0.8em;
+	}
+}
+nav a:hover {
   color: black;
 }
 
-.nave-toggle:checked ~ nav {
+.nav-toggle:checked ~ nav {
   transform: scale(1,1);
 }
 
-.nave-toggle:checked ~ nav a {
+.nav-toggle:checked ~ nav a {
   opacity: 1;
   transition: opacity 250ms ease-in-out 250ms;
 }
 
-@media screen and (min-width: 600px) {
-  .nave-toggle-label {
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
     display: none;
   }
 
-  .header {
+  header {
     display: grid;
 	grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
   }
-  
+
   .logo {
-    grid-column: 2 / 3;
-	 
+    grid-column: 1 / 3;
+
+
   }
-  
-  .nave {
+	.logo img {
+		height: 80px;
+		padding-top: 10px;
+	}
+
+  nav {
     all: unset;
     position: relative;
     text-align: left;
@@ -291,28 +153,28 @@ header {
     top: initial;
     left: initial;
     /* end Edge support stuff */
-    
-    grid-column: 3 / 4;
+
+    grid-column: 3,4 / 4;
     display: flex;
     justify-content: flex-end;
     align-items: center;
   }
-  
-  .nave ul {
+
+  nav ul {
     display: flex;
   }
-  
-  .nave li {
+
+  nav li {
     margin-left: 3em;
     margin-bottom: 0;
   }
-  
-  .nave a {
+
+  nav a {
     opacity: 1;
     position: relative;
   }
-  
-  .nave a::before {
+
+  nav a::before {
     content: '';
     display: block;
     height: 5px;
@@ -324,7 +186,8 @@ header {
     transform: scale(0, 1);
     transition: transform ease-in-out 250ms;
   }
-  
-  .nave a:hover::before {
+
+  nav a:hover::before {
     transform: scale(1,1);
   }
+}

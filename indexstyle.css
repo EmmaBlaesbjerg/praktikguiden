@@ -14,12 +14,22 @@ background-position: center 80px;
 	background-repeat: no-repeat;
 	height: 100vh;
 	margin: auto;
+	margin-bottom: 0;
+	   
+}
+
+@media screen and (max-width: 800px) {
+  .forsideimg {
+     height: 300px;
+	}
+	.scroll-downs{
+	display: none;
+	}
 }
 
 /*Mouse scroll style*/
 .scroll-downs {
-
-bottom: 50px;
+	bottom: 50px;
 	position: absolute;
 	left: 50%;
    max-width: 70px;
@@ -59,6 +69,8 @@ bottom: 50px;
 	text-align: center;
 	width: 100%;
 	height: auto;
+	max-width: auto;
+	border: 2
 	
 }
 
@@ -69,6 +81,7 @@ bottom: 50px;
 	width: 100%;
 	height: 80%; /*Kontrollere højden på slideshowet*/
 	left: 0;
+	
 }
 
 .sl-slider-wrapper {
@@ -748,180 +761,27 @@ Let’s style the content wrapper and the content division:*/
 }
 
 
-
-/*Navigation style*/
-
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-*, *::before, *::after {
-  box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-}
-/* navigation styles start here */
+/*Navigation*/
 header {
   background: white;
   text-align: center;
- 
-  width: 100%;
-	top: 0;
-	font-family: 'Open Sans', sans-serif;
-}
-/* changed this from the tutorial video to
-   allow it to gain focus, making it tabbable */
-.nave-toggle {
-  position: absolute !important;
-  top: -9999px !important;
-  left: -9999px !important;
-}
-.nave-toggle:focus ~ .nave-toggle-label {
-  outline: 3px solid rgba(lightblue, .75);
-}
-.nave-toggle-label {
-  position: absolute;
-  top: 1px;
-  right: 0;
-  margin-left: 1em;
-  height: 0%;
-  display: flex;
-  align-items: center;
-}
-.nave-toggle-label span,
-.nave-toggle-label span::before,
-.nave-toggle-label span::after {
-  display: block;
-  background: black;
-  height: 2px;
-  width: 2em;
-  border-radius: 2px;
-  position: relative;
-}
-.nave-toggle-label span::before,
-.nave-toggle-label span::after {
-  content: '';
-  position: absolute;
-}
-.nave-toggle-label span::before {
-  bottom: 7px;
-}
-.nave-toggle-label span::after {
-  top: 7px;
-}
-.nave {
-  position: absolute;
-  text-align: left;
-  top: 100%;
-  left: 0;
-  background: white;
-  width: 100%;
-  transform: scale(1, 0);
-  transform-origin: top;
-  transition: transform 400ms ease-in-out;
-	font: 15px open sans;
-}
-.nave ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.nave li {
-  margin-bottom: 1em;
-  margin-left: 1em;
-}
-.nave a {
-  color: black;
-  text-decoration: none;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  opacity: 0;
-  transition: opacity 150ms ease-in-out;
-}
-.nave a:hover {
-  color: black;
-}
-.nave-toggle:checked ~ nav {
-  transform: scale(1,1);
-}
-.nave-toggle:checked ~ nav a {
-  opacity: 1;
-  transition: opacity 250ms ease-in-out 250ms;
-}
-@media screen and (min-width: 800px) {
-  .nave-toggle-label {
-    display: none;
-  }
-  header {
-    display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
-  }
-  
-  .logo {
-    grid-column: 2 / 3;
-  }
-  
-  .nave {
-    // all: unset; /* this causes issues with Edge, since it's unsupported */
-    
-    /* the following lines are not from my video, but add Edge support */
-    position: relative;
-    text-align: left;
-    transition: none;
-    transform: scale(1,1);
-    background: none;
-    top: initial;
-    left: initial;
-    /* end Edge support stuff */
-    
-    grid-column: 3 / 4;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  
-  .nave ul {
-    display: flex;
-  }
-  
-  .nave li {
-    margin-left: 3em;
-    margin-bottom: 0;
-  }
-  
-  .nave a {
-    opacity: 1;
-    position: relative;
-  }
-  
-  .nave a::before {
-    content: '';
-    display: block;
-    height: 5px;
-    background: black;
-    position: absolute;
-    bottom: -.75em;
-    left: 0;
-    right: 0;
-    transform: scale(0, 1);
-    transition: transform ease-in-out 250ms;
-  }
-  
-  .nave a:hover::before {
-    transform: scale(1,1);
-  }
-
-
-.header {
-  background: white;
-  text-align: center;
   z-index: 999;
-  position: fixed;
+top:0%;
   width: 100%;
-  box-shadow: 1px 1px 10px 1px grey;
-	display: block;
+	box-shadow: 1px 1px 5px 1px lightgrey;
 }
-
+@media screen and (max-width: 760px) {
+	header {
+		position: fixed;
+		height: 55px;
+		width: 200px;
+		box-shadow: none;
+		background-color: transparent;
+	}
+	.logo {
+		display: none;
+	}
+}
 .logo img{
 	height: 80px;
 	width: auto;
@@ -988,6 +848,12 @@ header {
   padding: 0;
   list-style: none;
 }
+@media screen and (max-width: 1300px) {
+	.nave ul {
+		max-width: 600px;
+	}
+
+}
 
 .nave li {
   margin-bottom: 1em;
@@ -997,40 +863,49 @@ header {
 .nave a {
   color: black;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   opacity: 0;
   transition: opacity 150ms ease-in-out;
 }
-
+@media screen and (max-width: 1300px) {
+	.nave a {
+		font-size: 0.8em;
+	}
+}
 .nave a:hover {
   color: black;
 }
 
-.nave-toggle:checked ~ nav {
+.nave-toggle:checked ~ .nave {
   transform: scale(1,1);
 }
 
-.nave-toggle:checked ~ nav a {
+.nave-toggle:checked ~ .nave a {
   opacity: 1;
   transition: opacity 250ms ease-in-out 250ms;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   .nave-toggle-label {
     display: none;
   }
 
-  .header {
+  header {
     display: grid;
 	grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
   }
-  
+
   .logo {
-    grid-column: 2 / 3;
-	 
+    grid-column: 1 / 3;
+
+
   }
-  
+	.logo img {
+		height: 70px;
+		padding-top: 10px;
+	}
+
   .nave {
     all: unset;
     position: relative;
@@ -1041,27 +916,27 @@ header {
     top: initial;
     left: initial;
     /* end Edge support stuff */
-    
-    grid-column: 3 / 4;
+
+    grid-column: 3,4 / 4;
     display: flex;
     justify-content: flex-end;
     align-items: center;
   }
-  
-  .nave ul {
+
+ .nave ul {
     display: flex;
   }
-  
+
   .nave li {
     margin-left: 3em;
     margin-bottom: 0;
   }
-  
-  .nave a {
+
+ .nave a {
     opacity: 1;
     position: relative;
   }
-  
+
   .nave a::before {
     content: '';
     display: block;
@@ -1074,7 +949,8 @@ header {
     transform: scale(0, 1);
     transition: transform ease-in-out 250ms;
   }
-  
+
   .nave a:hover::before {
     transform: scale(1,1);
   }
+}

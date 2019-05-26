@@ -12,6 +12,7 @@ html {
 body {
 	background: white;
 	font-family: Open Sans;
+	height: 0;
 }
 
 /* Her rammes classerne i content diven, så vi kan bygge griddet */
@@ -36,6 +37,15 @@ body {
 .r {grid-area: r;}
 .s {grid-area: s;}
 .t {grid-area: t;}
+.u {grid-area: u;}
+.v {grid-area: v;}
+.w {grid-area: w;}
+.x {grid-area: x;}
+.y {grid-area: y;}
+.z {grid-area: z;}
+.z1 {grid-area: z1;}
+.z2 {grid-area: z2;}
+
 
 /* ====== */
 /* ============== */
@@ -68,7 +78,15 @@ body {
 		"aside q q"
 		"aside r r"
 		"aside s s"
-		"aside t t";
+		"aside t t"
+		"aside u u"
+		"aside v v"
+		"aside w w"
+		"aside x x"
+		"aside y y"
+		"aside z z"
+		"aside z1 z1"
+		"aside z2 z2";
 
 }
 p{
@@ -95,7 +113,12 @@ p{
 		"aside m n ."
 		"aside o p ."
 		"aside q r ."
-		"aside s t .";
+		"aside s t ."
+		"aside u v ."
+		"aside w x ."
+		"aside y z ."
+		"aside z1 z2 ."
+		;
 
 }
 
@@ -112,15 +135,15 @@ p{
 .hero-image {
   
 	background-size: contain;
-	width: 100%;
-	max-width: 1000px;
-	height: 70vh;
-	align-content: left;
+	width: auto;
+	
+	height: 100vh;
+	align-content: center;
 	background-repeat: no-repeat;
-	margin-right: 50%;
+	
 	padding-right: 0.5%;
 	margin-top: 0px;
-	margin-left: 820px;
+	
 }
 
 
@@ -174,17 +197,18 @@ p{
 /* ======== */
 
 /* billederne ved hver sektion */
-.a img, .d img {
+.a img, .d img, .g img, .j img, .m img, .p img, .s img {
 	height: 250px;
 	width: auto;
+	
 }
 @media screen and (max-width: 470px){
-	.a img, .d img {
+	.a img, .d img, .g img, .j img, .m img, .p img, .s img {
 		height: 160px;
 		width: auto;
 	}
 }/* ======*/
-.item.a, .item.d{
+.item.a, .item.d, .item.g, .item.j, .item.m, .item.p, .item.s {
 	text-align: center;
 }
 

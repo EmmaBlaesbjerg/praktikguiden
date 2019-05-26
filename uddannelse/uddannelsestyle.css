@@ -1,5 +1,5 @@
-@charset "utf-8";
-/* CSS Document */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap');
+
 *, *::before, *::after {
   box-sizing: border-box;
 	margin: 0;
@@ -9,7 +9,7 @@ html {
 	scroll-behavior: smooth;
 }
 body {
-	background: white;
+	font-family: 'Open Sans', sans-serif;
 }
 header {
   text-align: center;
@@ -19,16 +19,19 @@ header {
 	box-shadow: 1px 1px 5px 1px grey;
 }
 
-/* Dette er header billedet */
+/* The hero image */
 .hero-image {
-	background-image: url("../images/Uddannelse/uddannelse.png");
+  	background-image: url("../images/Uddannelse/uddannelse_linje_forside.png");
+	 
 	background-size: contain;
-	width: 1000px;
-	height: 70vh;
-	resize: both;
-	margin: 0 auto;
-	background-position: center center;
+	width: auto;
+	
+	height: 100vh;
+	align-content: center;
 	background-repeat: no-repeat;
+	
+	padding-right: 0.5%;
+	margin-top: 0px;
 }
 @media screen and (max-width: 760px){
 	.hero-image {
@@ -36,107 +39,48 @@ header {
 		height: 50vh;
 	}
 }
-/* h1 teksten der står på header billedet */
-.hero-h1 {
-	font-size: 5em;
-	max-width: 900px;
-	padding-top: 250px;
-}
-/* Menu kassen der fixed sidder i siden */
-aside {
-	position: fixed;
-	background: grey;
-	width: 100px;
-	height: auto;
-	text-align: center;
-	outline: 1px solid gray;
-	box-shadow: 1px 2px 1px 1px gray;
-	line-height: 1.5;
-	
-}
-aside a {
-	text-decoration: underline;
-	color: black;
-	font-size: 1em;
-	margin: 10px;
-}
-/* ============== */
 
-/* Dette er til når skærmen er under 760px, så går vi ned til 1 column til telefon view */
-.content {
-	padding-top: 70px;
-	display: grid;
-	grid-template-columns: 100px 1fr 1fr 20px;
-	grid-auto-rows: auto;
-	grid-gap: 10px;
-	grid-template-areas: 
-		"aside a a"
-		"aside b b"
-		"aside c c"
-		"aside d d"
-		"aside e e"
-		"aside f f"
-		"aside g g"
-		"aside h h"
-		"aside i i"
-		"aside j j"
-		"aside k k"
-		"aside l l";
+* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
 		
-}
-/* Her sørger vi får at der kommer 2 columns når skærmen er mindst 760 px stor */
-@media screen and (min-width: 760px){
-.content {
-	display: grid;
-	grid-template-columns: 100px 2fr 2fr 50px;
-	grid-auto-rows: auto;
-	margin: 0 auto;
-	grid-template-areas: /* Hvis der bliver tilføjet flere kasser i html, husk at tilføje i grid-area sektion, og tilføj herunder i grid-template-area også, så der er styr på hvordan det hele ser ud*/
-		"aside a b ."
-		"aside c d ."
-		"aside e f ."
-		"aside g h ."
-		"aside i j ."
-		"aside k l .";
-		
-}
-	}
-/* Dette er blot midlertidigt så man kan se kasserne i content */
-.item {
-	background-color: white;
-	box-shadow: 1px 2px 2px 1px gray;
-}
-
-/* ======== */
-/* Her rammes classerne i content diven, så vi kan bygge griddet */
-/* Hvis man tilføjer flere kasser i htmlen - husk derfor at tilføje dem herunder også. */
-.a {grid-area: a;}
-.b {grid-area: b;}
-.c {grid-area: c;}
-.d {grid-area: d;}
-.e {grid-area: e;}
-.f {grid-area: f;} 
-.g {grid-area: g;} 
-.h {grid-area: h;} 
-.i {grid-area: i;} 
-.j {grid-area: j;} 
-.k {grid-area: k;}
-.l {grid-area: l;}
-aside { grid-area: aside;}
-/* ====== */
-
-.a img, .d img {
-	height: 200px;
-	width: auto;
+		.uddannelses-wrapper {
+			display: grid;
+			max-width: 1000px;
+			margin: 0 auto;
+			padding-top: 10px;
+			padding-bottom: 100px;
+			
+			
+		}
+		.main-ul {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+			grid-gap: 20px;
 	
-	
-}
-.item.a, .item.d{
-	text-align: center;
-}
-footer {
-	background: #E1E0DB;
-	height: 150px;
-	margin-top: 40px;
-}
-
+		}
+		.main-li {
+			border: 1px solid grey;
+			list-style: none;
+			height: 100px;
+			
+			padding: 1rem;
+		}
+		.main-a {
+			color: black;
+			font-size: 1rem;
+			text-decoration: none;
+			font-weight: 700;
+			margin: 1rem 2rem 0;
+			
+			
+		}
+		.main-a:hover {
+			color: lightgrey;
+		}
+		.material-icons {
+			position: absolute;
+			bottom: 100;
+		}

@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="da">
-    <head>
+		<head>
 		<meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
         <title>PraktikGuiden</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta name="description" content="Fullscreen Slit Slider with CSS3 and jQuery" />
         <meta name="keywords" content="slit slider, plugin, css3, transitions, jquery, fullscreen, autoplay" />
-        <meta name="author" content="Codrops" />
+        <meta name="author" content="Codrops"/>
 		
 		<!--Navigation links-->	
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
 		
 		<!--Stylingslink-->
         <link rel="stylesheet" type="text/css" href="indexstyle.css"/>
+		
 		<!--Slide show links-->
 		<script type="text/javascript" src="jsindex/modernizr.custom.79639.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script><!--jQuery javascript library-->
+		<script type="text/javascript" src="jsindex/jquery.ba-cond.min.js"></script> <!--Required javascript - Arrows and bullets navigation.-->
+		<script type="text/javascript" src="jsindex/jquery.slitslider.js"></script> <!--Java script dokument-->
+		
 		
 		<!--Footer links-->
 		<link rel="stylesheet" href="footer/footerstyle.css"> <!--Footer-->
+		<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><!--Google translate-->
 		
-    </head>
-    <body>
+		<!--Char box style-->
+		<link rel="stylesheet" href="chatbox/chatboxstyle.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
+		</head>
+	
+    	<body>
 
 		<!--Navigation-->
 		<header>
@@ -29,11 +40,11 @@
   <input type="checkbox" id="nave-toggle" class="nave-toggle">
   <div class="nave">
     <ul>
-      <li><a href="#">Generel information</a></li>
-      <li><a href="#">Motiveret ansøgning</a></li>
-      <li><a href="#">Legat</a></li>
-      <li><a href="#">Cv</a></li>
-		<li><a href="#">Uddannelse</a></li>
+      <li><a href="generel/generel.html">Generel information</a></li>
+      <li><a href="motiveret/motiveret.html">Motiveret ansøgning</a></li>
+      <li><a href="legat/legat.html">Legat</a></li>
+      <li><a href="cv/cv.html">Cv</a></li>
+		<li><a href="uddannelse/uddannelse.html">Uddannelse</a></li>
     </ul>
   </div>
  <label for="nave-toggle" class="nave-toggle-label">
@@ -52,7 +63,13 @@
 		
 		
 		<!--Om os-->
-		<blockquote><p class="omos">Her på PraktikGuiden kan du finde alt information der er værd vide om virksomhedspraktikforløbet på den uddannelsesinstitution du er tilknyttet. Herunder hvornår forløbet finder sted, hvordan du skriver et godt CV, hvad dine muligheder er for at søge praktik i ind- eller udland, hvilke legater du kan søge og  meget mere. 
+		
+		<div class="blockquote-wrapper">
+  		<div class="blockquote">
+    	<h4>
+		<div class="omos">Om os</div>
+			<br><br>
+    	Her på PraktikGuiden kan du finde alt information der er værd vide om virksomhedspraktikforløbet på den uddannelsesinstitution du er tilknyttet. Herunder hvornår forløbet finder sted, hvordan du skriver et godt CV, hvad dine muligheder er for at søge praktik i ind- eller udland, hvilke legater du kan søge og  meget mere. 
 		<br><br>
 
 		Målet med PraktikGuiden er at simplificere og samle opdateret information for alle studerende  Danmark, der skal ud i praktik hvad enten det er her i Danmark eller et andet sted i verden. 
@@ -62,9 +79,13 @@
 		<br>
 		PraktikGuiden er i samarbejde med Danmarks Udddannelsesministerie, blevet udviklet af et team af studerende på CPH Business Lyngby.
 		<br>
-		</p></blockquote>
+     	</h4>
+ 		</div>
+		</div>
 		
 		
+		
+		<!-- /slider-wrapper -->
         <div class="container demo-1">
 		
 
@@ -126,19 +147,17 @@
 					<span></span>
 				</nav>
 
-			</div><!-- /slider-wrapper -->
+			</div>
+		</div>
 
-        </div>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script><!--jQuery javascript library-->
-		<script type="text/javascript" src="jsindex/jquery.ba-cond.min.js"></script> <!--Required javascript - Arrows and bullets navigation.-->
-		<script type="text/javascript" src="jsindex/jquery.slitslider.js"></script> <!--Java script dokument-->
+        
 		
-			<!-- Footer -->
+		<!-- Footer -->
 		<footer class="footer-distributed">
 			<!--Venstre side footer-->
 			<div class="footer-left">
 
-				<img src="../images/logo/logo.png" width="175" height="118" alt=""/>
+				<img src="images/logo/logo.png" width="175" height="118" alt=""/>
 
 
 				<p class="footer-company-name">Praktik Guiden &copy; 2019</p>
@@ -177,19 +196,34 @@
 					PraktikGuiden en en gratisk søgemaskine for al information der er værd vide om virksomhedspraktikforløbet på den uddannelsesinstitution du er tilknyttet.
 				</p>
 
-				<div class="footer-icons">
-
-					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-linkedin"></i></a>
-					<a href="#"><i class="fa fa-github"></i></a>
-
-				</div>
+				
 
 			</div>
 
 		</footer>
+		<script src="footer/footerjava.js"></script>
 	
+		<!--Chatbox-->
+
+		<div id="container1" class="container1">
+		<div class="velkomstTekst">
+			<h1>Chat med Ava</h1>
+				<p class="praktikguiden"> <br> Kan du finde svar på det du leder efter, eller er der noget information, du mangler?</p>
+		</div>
+
+		<div class="box">
+				<input type="text" id="textfelt" placeholder="Stil dit spørgsmål...">
+				<img src="images/chatbox/maskotchat.png" alt="maskotten ava til chatbot">
+		</div>
+		<div class="textbox">
+				<p id="magictekst">Svar:</p>
+		</div>
+
+	</div>
+		<div class="fixedButton">
+		<button id="chatBotButton"><i class="material-icons" style="font-size:34px;color:white">chat</i></button>
+	</div>
+		<script src="chatbox/chatboxjava.js"></script>
 		
 		<!---->
 		<script type="text/javascript">	

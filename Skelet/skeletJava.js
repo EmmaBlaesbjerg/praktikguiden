@@ -1,12 +1,13 @@
 // JavaScript Document
 
+
 //Google translate
 
 function googleTranslateElementInit() {
 				new google.translate.TranslateElement({pageLanguage: 'da'}, 'google_translate_element');}
 
 
-
+//Read more knap
 $(document).on("click", ".toggle-text-button", function() {
 
   // Check if text is more or less
@@ -29,6 +30,8 @@ $(document).on("click", ".toggle-text-button", function() {
     
   }
   });
+
+
 
 window.addEventListener("scroll",function(){
   var target = document.getElementsByClassName('sidenav');

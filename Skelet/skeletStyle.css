@@ -97,7 +97,8 @@ p{
 @media screen and (min-width: 760px){
 .content {
 	display: grid;
-	grid-template-columns: 160px 2fr 2fr 100px;
+	grid-template-columns: 60px 2fr 2fr 100px;
+	max-width: 1500px;
 	padding: 100px 6%;
 	grid-column-gap: 100px;
 	font-size: 16px;
@@ -197,18 +198,18 @@ p{
 /* ======== */
 
 /* billederne ved hver sektion */
-.a img, .d img, .g img, .j img, .m img, .p img, .s img {
+.a img, .d img, .g img, .j img, .m img, .p img, .s img, .v img, .y img {
 	height: 250px;
 	width: auto;
 	
 }
 @media screen and (max-width: 470px){
-	.a img, .d img, .g img, .j img, .m img, .p img, .s img {
+	.a img, .d img, .g img, .j img, .m img, .p img, .s img, .v img, .y img {
 		height: 160px;
 		width: auto;
 	}
 }/* ======*/
-.item.a, .item.d, .item.g, .item.j, .item.m, .item.p, .item.s {
+.item.a, .item.d, .item.g, .item.j, .item.m, .item.p, .item.s, .item.v, .item.y  {
 	text-align: center;
 }
 

@@ -19,6 +19,8 @@
    margin-bottom: 2px;
    text-align: center;
 	margin-color: lightgrey;
+	font-family: 'Open Sans', sans-serif;
+	
 }
 
 @media (max-height:800px){

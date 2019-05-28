@@ -53,61 +53,57 @@
 	<br><br>
 	
 	<!-- Dette er den fixed menu bar ude i siden -->
+	<div class="fixedAside">
 	<aside>
-
+		
 	<div class="sidenav">
-
-
-	<button class="dropdown-btn">  <a href="#1">Praktik i udlandet</a> </button>
+		
+			
+ <button class="dropdown-btn">  <a href="#1">Praktik i udlandet</a> </button>
 	<div class="dropdown-container">
-	</div>
+  </div>
 
-	<button class="dropdown-btn">  <a href="#2">Hvem kan hjælpe mig?</a> 
-	<i class="fa fa-caret-down"></i>
-	</button>
-	<div class="dropdown-container">
-	<a href="#2.1">Praktikkoordinator</a>
-	<a href="#2.2">Praktikvejleder</a>
-	<a href="#2.3">Kontaktperson</a>
-	</div>
-
-
-	<button class="dropdown-btn">  <a href="#3">Hvordan kommer man i praktik?</a> 
-	<i class="fa fa-caret-down"></i>
-	</button>
-	<div class="dropdown-container">
-	<a href="#3.1">Hvordan finder man egnet praktikvirksomhed?</a>
-	<a href="#3.2">Du skal søge en praktikplads</a>
-	<a href="#3.3">Hvad skal man lave i praktikken?</a>
-	<a href="#3.4">Du skal indgå en praktikkontrakt</a>
-	<a href="#3.5">Hvad skal der stå i praktikkontrakten?</a>
-	<a href="#3.6">Hvordan kommer jeg i gang?</a>
-	</div>
-
+	  <button class="dropdown-btn">  <a href="#2">Hvem kan hjælpe mig?</a> 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#2.1">Praktikkoordinator</a>
+    <a href="#2.2">Praktikvejleder</a>
+    <a href="#2.3">Kontaktperson</a>
+  </div>
+   
+	
+   <button class="dropdown-btn">  <a href="#3">Hvordan kommer man i praktik?</a> 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#3.1">Hvordan finder man egnet praktikvirksomhed?</a>
+    <a href="#3.2">Du skal søge en praktikplads</a>
+    <a href="#3.3">Hvad skal man lave i praktikken?</a>
+	  <a href="#3.4">Du skal indgå en praktikkontrakt</a>
+	  <a href="#3.5">Hvad skal der stå i praktikkontrakten?</a>
+	  <a href="#3.6">Hvordan kommer jeg i gang?</a>
+  </div>
+	
 	<button class="dropdown-btn"><a href="#4">Hvad er kravene til mig som studerende?</a>
-	<i class="fa fa-caret-down"></i>
-	</button>
-	<div class="dropdown-container">
-	<a href="#4.1">Inden praktikforløbet</a>
-	<a href="#4.2">Under praktikforløbet</a>
-	<a href="#4.3">Efter praktikforløbet</a>
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#4.1">Inden praktikforløbet</a>
+    <a href="#4.2">Under praktikforløbet</a>
+    <a href="#4.3">Efter praktikforløbet</a>
+  </div>
+		
+		   <button class="dropdown-btn">  <a href="#5">Hvilke krav er der til virksomheden?</a> </button>
+	   <div class="dropdown-container">
+  </div>
+	   
+<button class="dropdown-btn">  <a href="#6">Praktiske ting</a></button>
+		<div class="dropdown-container">
+  </div>
+		</div>
+		</aside>
 	</div>
-
-
-	<button class="dropdown-btn">  <a href="#5">Hvilke krav er der til virksomheden?</a> </button>
-	<div class="dropdown-container">
-	</div>
-
-	<button class="dropdown-btn">  <a href="#6">Praktiske ting</a>
-	<i class="fa fa-caret-down"></i>
-	</button>
-	<div class="dropdown-container">
-	<a href="#6.1">Erkendtlighed</a>
-	<a href="#6.2">Forsikring</a>
-	<a href="#6.3">Hvad nu hvis det går galt?</a>
-	</div>
-	</div>
-	</aside>	
 	
 
 	<!-- Grid skelettet -->
@@ -356,7 +352,22 @@
 	
 	<script src="genereljava.js"></script>
 	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	<script>
+//Drop down bottom i sidenav
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
 
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}</script>
 
 
 </body>

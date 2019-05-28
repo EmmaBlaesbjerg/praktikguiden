@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Cv information</title>
+<title>Cv ansøgning</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!-- Google translate - This line adds jquery to the page, otherwise the script tags at the bottom will not run -->
 	<link rel="stylesheet" href="../chatbox/chatboxstyle.css"> <!--Chatbox style-->
 	<link rel="stylesheet" href="cvstyle.css" type="text/css"><!--style-->
@@ -53,75 +53,101 @@
 	<br><br>
 	
 	<!-- Dette er den fixed menu bar ude i siden -->
-	<aside>
+	<div class="fixedAside">
+		<aside>
 
 	<div class="sidenav">
 
 
  <button class="dropdown-btn">  <a href="#1">Generelinformation</a> 
     <i class="fa fa-caret-down"></i>
+	 <div class="dropdown-container">
+  </div>
   </button> 
  
    
 	
    <button class="dropdown-btn">  <a href="#2">Hvad er et CV?</a> 
     <i class="fa fa-caret-down"></i>
+	   <div class="dropdown-container">
+  </div>
   </button>
   
 	
 	<button class="dropdown-btn"><a href="#3">Sådan skriver du et CV</a>
     <i class="fa fa-caret-down"></i>
+		<div class="dropdown-container">
+  </div>
   </button>
   
 	
    <button class="dropdown-btn">  <a href="#4">Personlige oplysninger</a> 
     <i class="fa fa-caret-down"></i>
+	   <div class="dropdown-container">
+  </div>
   </button>
   
 	   
 	   
 	<button class="dropdown-btn">  <a href="#5">Personlig profil</a> 
 		<i class="fa fa-caret-down"></i>
+		<div class="dropdown-container">
+  </div>
   </button>
   
   
 	   
 	   <button class="dropdown-btn">  <a href="#6">Uddannelse</a> 
     <i class="fa fa-caret-down"></i>
+		   <div class="dropdown-container">
+  </div>
   </button>
  
 	   
 	   <button class="dropdown-btn">  <a href="#7">Erhvervserfaring</a> 
     <i class="fa fa-caret-down"></i>
+		   <div class="dropdown-container">
+  </div>
   </button>
  
 	   <button class="dropdown-btn">  <a href="#8">Frivilligt arbejde</a> 
     <i class="fa fa-caret-down"></i>
+		   <div class="dropdown-container">
+  </div>
   </button>
  
 	   
 	   <button class="dropdown-btn">  <a href="#9">Sprogkompetencer</a> 
     <i class="fa fa-caret-down"></i>
+		   <div class="dropdown-container">
+  </div>
   </button>
   
 	   
 	   <button class="dropdown-btn">  <a href="#10">IT-kompetencer</a> 
     <i class="fa fa-caret-down"></i>
+		   <div class="dropdown-container">
+  </div>
   </button>
  
 	   
 	   <button class="dropdown-btn">  <a href="#11">Fritidsinteresser</a> 
     <i class="fa fa-caret-down"></i>
+		   <div class="dropdown-container">
+  </div>
   </button>
  
 	   
 	   <button class="dropdown-btn">  <a href="#12">5 hurtige tips</a> 
     <i class="fa fa-caret-down"></i>
+		   <div class="dropdown-container">
+  </div>
   </button>
 	</div>
 
 	</aside>
-	<script src="../navigation/sidemenujava.js"></script><!--Sidenavigation meu-->
+	</div>
+	
 
 	<!-- Grid skelettet -->
 	<div class="content">
@@ -406,7 +432,22 @@
 	
 	<script src="cvjava.js"></script>
 	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		<script>
+//Drop down bottom i sidenav
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
 
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}</script> <!--Drop down effekt sidenav-->
 
 
 </body>

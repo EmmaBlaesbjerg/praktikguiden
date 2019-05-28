@@ -10,6 +10,7 @@ html {
 }
 body {
 	font-family: 'Open Sans', sans-serif;
+	background:#FDFCFC;
 }
 header {
   text-align: center;
@@ -57,7 +58,7 @@ header {
 		}
 		.main-ul {
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 			grid-gap: 20px;
 	
 		}

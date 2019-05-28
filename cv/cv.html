@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="../navigation/sidemenustyle.css"> <!--Side menu style-->
 	<link rel="stylesheet" href="../footer/footerstyle.css"> <!--Footer-->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"> <!--ikon symboler-->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
 
 	
 	
@@ -38,7 +39,7 @@
       <li><a href="../generel/generel.html">Generel information</a></li>
       <li><a href="../motiveret/motiveret.html">Motiveret ansøgning</a></li>
       <li><a href="../legat/legat.html">Legat</a></li>
-      <li><a href="#">Cv</a></li>
+      <li><a id="stat" href="#">Cv</a></li>
 	  <li><a href="../uddannelse/uddannelse.html">Uddannelse</a></li>
     </ul>
   </nav>
@@ -60,7 +61,7 @@
 
 
  <button class="dropdown-btn">  <a href="#1">Generelinformation</a> 
-    <i class="fa fa-caret-down"></i>
+    
 	 <div class="dropdown-container">
   </div>
   </button> 
@@ -68,21 +69,21 @@
    
 	
    <button class="dropdown-btn">  <a href="#2">Hvad er et CV?</a> 
-    <i class="fa fa-caret-down"></i>
+    
 	   <div class="dropdown-container">
   </div>
   </button>
   
 	
 	<button class="dropdown-btn"><a href="#3">Sådan skriver du et CV</a>
-    <i class="fa fa-caret-down"></i>
+    
 		<div class="dropdown-container">
   </div>
   </button>
   
 	
    <button class="dropdown-btn">  <a href="#4">Personlige oplysninger</a> 
-    <i class="fa fa-caret-down"></i>
+   
 	   <div class="dropdown-container">
   </div>
   </button>
@@ -90,7 +91,7 @@
 	   
 	   
 	<button class="dropdown-btn">  <a href="#5">Personlig profil</a> 
-		<i class="fa fa-caret-down"></i>
+		
 		<div class="dropdown-container">
   </div>
   </button>
@@ -98,48 +99,48 @@
   
 	   
 	   <button class="dropdown-btn">  <a href="#6">Uddannelse</a> 
-    <i class="fa fa-caret-down"></i>
+    
 		   <div class="dropdown-container">
   </div>
   </button>
  
 	   
 	   <button class="dropdown-btn">  <a href="#7">Erhvervserfaring</a> 
-    <i class="fa fa-caret-down"></i>
+    
 		   <div class="dropdown-container">
   </div>
   </button>
  
 	   <button class="dropdown-btn">  <a href="#8">Frivilligt arbejde</a> 
-    <i class="fa fa-caret-down"></i>
+    
 		   <div class="dropdown-container">
   </div>
   </button>
  
 	   
 	   <button class="dropdown-btn">  <a href="#9">Sprogkompetencer</a> 
-    <i class="fa fa-caret-down"></i>
+   
 		   <div class="dropdown-container">
   </div>
   </button>
   
 	   
 	   <button class="dropdown-btn">  <a href="#10">IT-kompetencer</a> 
-    <i class="fa fa-caret-down"></i>
+   
 		   <div class="dropdown-container">
   </div>
   </button>
  
 	   
 	   <button class="dropdown-btn">  <a href="#11">Fritidsinteresser</a> 
-    <i class="fa fa-caret-down"></i>
+  
 		   <div class="dropdown-container">
   </div>
   </button>
  
 	   
 	   <button class="dropdown-btn">  <a href="#12">5 hurtige tips</a> 
-    <i class="fa fa-caret-down"></i>
+  
 		   <div class="dropdown-container">
   </div>
   </button>
@@ -189,7 +190,7 @@
 				
 			
 
-		  </p><a class="toggle-text-button">Read More</a>
+		  </p><a class="toggle-text-button">Læs mere</a>
 		</div>
 			
 		
@@ -211,7 +212,7 @@
 				I dit CV skal du altid medtage din personlige oplysninger som navn, adresse, fødselsår, telefonnummer og mail-adresse. Rækkefølgen bestemmer du selv, men sørg for at have følgende nedenstående emner med. Ved hvert punkt skal hvad, hvor og hvornår gerne fremgå.<br><br>
 
 
-		  </p><a class="toggle-text-button">Read More</a>
+		  </p><a class="toggle-text-button">Læs mere</a>
 		</div>
 		
 		
@@ -231,7 +232,7 @@
 
 
 
-		  </p><a class="toggle-text-button">Read More</a>
+		  </p><a class="toggle-text-button">Læs mere</a>
 		</div>
 		
 		
@@ -254,7 +255,7 @@
 
 
 
-		  </p><a class="toggle-text-button">Read More</a>	
+		  </p><a class="toggle-text-button">Læs mere</a>	
 		</div>
 		
 		
@@ -351,6 +352,8 @@
 </div>
 
 
+	<!--Pil til top-->
+	<a href="#"><i class="material-icons" style="font-size:40px">arrow_upward</i></a>
 
 	<!--Chatbox-->
 		
@@ -373,6 +376,7 @@
 	<button id="chatBotButton"><i class="material-icons" style="font-size:34px;color:white">chat</i></button>
 </div>
 	<script src="../chatbox/chatboxjava.js"	></script>
+
 	
 	
 	<!-- Footer -->
@@ -393,18 +397,23 @@
 				<p class="footer-links">
 				
 				<div>
-					
 					<p><span>Andmeldelser</span></p>
 				</div>
 
 				<div>
-				
 					<p><span>Om os</span></p>
 				</div>
 
 				<div>
+				<ul>
+				<li id="modal">
+				<button id="WatchAgain">Click to watch video again</button>
+				</li>	
+				</ul>
 					
-					<p><span><a href="https://cphbusiness.mrooms.net/course/view.php?id=802">CPH Business academy praktik info</a></span></p>
+					
+					
+				<p><span><a href="https://cphbusiness.mrooms.net/course/view.php?id=802">CPH Business academy praktik info</a></span></p>
 				</div>
 				<!--Google tranlate-->
 				<div id="google_translate_element"></div><!--Id hvori der henntes javascript som oversætter siden via google translate-->
@@ -450,5 +459,6 @@ for (i = 0; i < dropdown.length; i++) {
 }</script> <!--Drop down effekt sidenav-->
 
 
+	
 </body>
 </html>

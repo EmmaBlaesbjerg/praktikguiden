@@ -6,6 +6,7 @@
 body{
 	font-family: 'Open Sans', sans-serif;
 	height: 0px;
+	background:#FDFCFC;
 }
 
 
@@ -357,7 +358,7 @@ We also need to give the same background color to the dynamic slice element, the
 /* First Slide */
 .demo-1 .bg-1 .sl-slide-inner,
 .demo-1 .bg-1 .sl-content-slice {
-	background: #fff;
+	background: #FDFCFC;
 }
 
 /* Second Slide */
@@ -787,6 +788,7 @@ header {
 top:0%;
   width: 100%;
 	box-shadow: 1px 1px 5px 1px lightgrey;
+	background:#FDFCFC;
 }
 @media screen and (max-width: 760px) {
 	header {

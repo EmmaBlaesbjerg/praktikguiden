@@ -10,7 +10,7 @@ html {
 	scroll-behavior: smooth;
 }
 body {
-	background: white;
+	background:#FDFCFC;
 	font-family: Open Sans;
 	height: 0;
 }
@@ -52,8 +52,8 @@ body {
 
 /* Dette er til når skærmen er under 760px, så går vi ned til 1 column til telefon view */
 .content {
-	padding-top: 100px;
 	
+	max-width: 760px;
 	display: grid;
 	grid-template-columns: 100px 1fr 1fr 0px;
 	grid-auto-rows: auto;
@@ -205,8 +205,8 @@ p{
 }
 @media screen and (max-width: 470px){
 	.a img, .d img, .g img, .j img, .m img, .p img, .s img, .v img, .y img {
-		height: 160px;
-		width: auto;
+		height: auto;
+		width: 160px;
 	}
 }/* ======*/
 .item.a, .item.d, .item.g, .item.j, .item.m, .item.p, .item.s, .item.v, .item.y  {
@@ -239,8 +239,15 @@ p{
 /*  ========== */
 
 footer {
-	background: #E1E0DB;
+	
 	height: 150px;
 	margin-top: 40px;
 }
 
+	a .material-icons{
+			position: absolute;
+			position: fixed;
+			bottom: 500px;
+			right: 10px;
+			color: black;
+		}

@@ -11,7 +11,7 @@
   z-index: 1;
   top: 10%;
   left: 0;
-  background-color: #111;
+  background-color: lightgray;
   overflow-x: hidden;
   padding-top: 20px;
 	font-size: 10px;
@@ -70,7 +70,7 @@ transform: translate(0px, 0px)
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
   display: none;
-  background-color: #262626;
+  background-color: #BFBFBF;
   padding-left: 8px;
 }
 

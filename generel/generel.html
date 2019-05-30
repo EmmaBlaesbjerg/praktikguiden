@@ -20,8 +20,16 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!--Ikoner java-->
 	<script src="../Skelet/skeletJava.js"></script> <!--Skelet java-->
 	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><!--Google translate-->
-	<script src="legatjava.js"></script><!--Legat java-->
-	
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141004576-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-141004576-1');
+		</script>
 
 
 
@@ -35,11 +43,12 @@
   <input type="checkbox" id="nav-toggle" class="nav-toggle">
   <nav>
     <ul>
+	<a href="../index.html"><img id="hidden-logo" src="../images/logo/logo.png" alt="Logo"/></a>
       <li><a id="stat" href="../generel/generel.html">Generel information</a></li>
       <li><a href="../motiveret/motiveret.html">Motiveret ansøgning</a></li>
       <li><a href="../legat/legat.html">Legat</a></li>
       <li><a href="../cv/cv.html">Cv</a></li>
-	  <li><a href="../uddannelse/uddannelse.html">Uddannelse</a></li>
+	  <li><a href="../uddannelse/uddannelse.html">Studieretning</a></li>
     </ul>
   </nav>
   <label for="nav-toggle" class="nav-toggle-label">
@@ -104,6 +113,7 @@
 		</div>
 		</aside>
 	</div>
+	<script src="../navigation/sidemenujava.js"></script>
 	
 
 	<!-- Grid skelettet -->
@@ -304,7 +314,7 @@
 			<!--Venstre side footer-->
 			<div class="footer-left">
 
-				<img src="../images/logo/logo.png" width="175" height="118" alt=""/>
+				<img id="footlogo" src="../images/logo/logo.png" alt=""/>
 
 
 				<p class="footer-company-name">Praktik Guiden &copy; 2019</p>
@@ -341,7 +351,7 @@
 				<p class="footer-company-about">
 					<br>
 					<span>Om os</span>
-					PraktikGuiden en en gratisk søgemaskine for al information der er værd vide om virksomhedspraktikforløbet på den uddannelsesinstitution du er tilknyttet.
+					PraktikGuiden en en gratisk søgemaskine for al information der er værd vide om virksomhedspraktikforløbet på det uddannelsesinstitution du er tilknyttet.
 				</p>
 
 			</div>
@@ -354,7 +364,6 @@
 	
 	
 	<script src="genereljava.js"></script>
-	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 	<script>
 //Drop down bottom i sidenav
 var dropdown = document.getElementsByClassName("dropdown-btn");

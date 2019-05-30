@@ -19,7 +19,9 @@ top:0%;
 	.logo {
 		display: none;
 	}
+
 }
+
 .logo img{
 	height: 80px;
 	width: auto;
@@ -123,11 +125,18 @@ nav a:hover {
   opacity: 1;
   transition: opacity 250ms ease-in-out 250ms;
 }
+#hidden-logo{
+	height: 50px;
+	width: auto;
+}
 
 @media screen and (min-width: 800px) {
   .nav-toggle-label {
     display: none;
   }
+	#hidden-logo{ 
+	display: none; 
+}
 
   header {
     display: grid;
@@ -191,6 +200,8 @@ nav a:hover {
   nav a:hover::before {
     transform: scale(1,1);
   }
+
+
 }
 
 /*Streg under valgte navigations punkt*/

@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<link rel="stylesheet" href="skeletStyle.css" type="text/css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+		<header>
+  <div class="logo"><img src="../img/praktikguidenLogo.png"></div>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <label for="nav-toggle" class="nav-toggle-label">
+    <span></span>
+  </label>
+</header>
+
+	<!-- dette er header image -->
+	<div class="hero-image"><h1 class="hero-h1">Legat</h1></div>
+	
+	<!-- Dette er den fixed menu bar ude i siden -->
+
+	
+	<!-- menuen ude i siden til al info -->
+	<div class="fixedAside">
+	<aside>
+		
+			<ul>
+				<li><a href="#section1">Sådan skriver du CV</a></li><hr>
+				<li><a href="#">Style dit CV</a></li><hr>
+				<li><a href="#"></a></li><hr>
+				<li><a href="#">link1</a></li><hr>
+				<li><a href="#">link1</a></li><hr>
+				<li><a href="#">link1</a></li><hr>
+			</ul>
+		
+	</aside>
+		</div>
+	<!-- Grid skelettet -->
+	<div class="content">
+	
+		<div class="item a" id="section1"><img src="../img/praktikguiden.png"></div>
+		<div class="item b"><details><summary>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi vero in quo repellendus consequatur mollitia fugiat adipisci ab neque.</summary> <p>Ipsam ad adipisci optio, fuga quasi id doloribus voluptates excepturi vel mollitia perferendis provident praesentium voluptatibus odio. Exercitationem sunt, minima sequi facilis deleniti amet ratione aperiam dignissimos delectus ab reiciendis ullam dolor, doloribus incidunt ad sapiente possimus, earum ut? Quas, soluta, minus. Dicta ipsam ratione, nemo mollitia impedit ea fugiat aut ut quaerat veritatis error expedita deserunt cumque at itaque doloremque a. Rem reiciendis autem modi nostrum, cupiditate? Ea sed vero cumque distinctio odio, laborum necessitatibus natus delectus perspiciatis maxime deserunt assumenda veniam rem deleniti, provident reprehenderit repellendus eius autem nulla unde soluta quae veritatis eos corrupti! Consequatur sint inventore, debitis, vitae sapiente eum temporibus doloribus numquam amet est quam similique consectetur sequi laboriosam dolorem accusamus fuga accusantium. Incidunt tenetur perferendis pariatur quasi, animi, facere, porro aspernatur ratione natus numquam quo!</p></details></div>
+			
+		
+		<div class="item c">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quaerat qui mollitia soluta vero possimus, eius maiores est aliquam numquam! Autem minima, eaque praesentium mollitia molestias corrupti. Rerum impedit totam minus amet ea natus quod ex architecto consequatur quas cupiditate rem necessitatibus doloremque minima in, modi dolore dolores. Animi vero libero consequatur quibusdam cupiditate autem cum odio, molestias mollitia illo consequuntur ut quos maiores laudantium quis illum nesciunt saepe. Maiores odit mollitia nisi sunt aperiam nemo voluptate non, omnis commodi dignissimos, nam? Vitae assumenda consequuntur dolores, quaerat deleniti laboriosam voluptatem error illum aliquid aliquam, velit, molestiae molestias necessitatibus! Iste, esse!</div>
+		<div class="item d"><img src="../img/praktikguiden.png"></div>
+		<div class="item e">Tekst 5</div>
+		<div class="item f">Tekst 6</div>
+		<div class="item g">Billede 7</div>
+		<div class="item h">Tekst 8</div>
+		<div class="item i">Tekst 9</div>
+		<div class="item j">Billede 10</div>
+		<div class="item 11 k">Tekst 11</div>
+		<div class="item 12 l">Tekst 12</div>
+	</div>
+	
+	<!-- grid slut -->
+	<div id="container" class="container">
+		<div class="velkomstTekst">
+		<h1 class="praktikguiden">PraktikGuiden</h1>
+		<p>Velkommen til PraktikGuidens helt egen chatbot - stil dine spørgsmål til den, og den vil gøre sit bedste for, at give dig et brugbart svar!</p>
+			</div>
+    <div class="box">
+        <h1>Chatbot</h1>
+    <input type="text" id="textfelt" placeholder="Send meddelelse her...">
+</div>
+        <div class="textbox">
+            <p id="magictekst">Hej du, Chatbot her! <br> Jeg ved ikke så meget endnu - men prøv "hjælp", "praktik" eller "praktikvejleder"</p>
+        </div>
+    
+</div>
+	<div class="fixedButton">
+	<button id="chatBotButton"><i class="material-icons" style="font-size:34px;color:white">chat</i></button>
+	</div>
+	<footer>FOOTER</footer>
+	<script>
+	
+	// først rammer man knappens ID som ligger i html'en, derefter tilføjer man en click + function til knappen. 
+		// når man klikker på knappen, manipulerer man med CSS'en, Strict equality (===) siger at, displayet i CSSEN SKAL være sat til none ellers fungerer functionen ikke. derefter vil man kunne åbne og lukke chatbotten, ved hjælp af css manipulation.
+
+		document.getElementById('chatBotButton').addEventListener('click', function(){
+			let container = document.getElementById('container')
+		   if(container.style.display === 'none') {
+			   container.style.display = "block"; 
+		   }else {
+			   container.style.display = "none";
+		   }
+    })
+	
+ document.getElementById('textfelt').addEventListener('keyup' , function(event){
+     if (event.keyCode === 13) {
+     let text = document.getElementById('textfelt').value
+     let magicText = showText(text)
+    document.getElementById('magictekst').innerHTML =  magicText;
+     }
+ })
+	// her komme chat funktionen til livs. Ved hjælp af 'toUpperCase' kan man sørge for at uanset hvilken størrelse bogstaver der skrives vil den ramme keywordet.
+		// derefter kommer vores if / else, hvor alle vores keywords ligger i. Når man rammer keywordet 'Hjælp' vil den returne den skrevne tekst til keywordet hjælp.
+function showText(text){
+    let temp = text.toUpperCase();
+    if(temp.includes('HJÆLP')) {
+        return 'ligegyldig hjælp til chatbotten her'
+    }else if(temp.includes('PRAKTIKVEJLEDER') || temp.includes('VEJLEDER')){
+        return 'du finder praktik vejlederen "indsæt navn her" et eller andet sted på skolen'
+    }else if(temp.includes('PRAKTIK')){
+        return 'mega vigtig info omkring praktik her'
+    }
+    else{
+        return  'Det kan jeg desværre ikke lige hjælpe dig med. Prøv med "hjælp", "praktik" eller "praktikvejleder"'
+    }
+}</script>
+</body>
+</html>

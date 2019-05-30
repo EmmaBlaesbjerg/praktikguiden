@@ -244,10 +244,12 @@ footer {
 	margin-top: 40px;
 }
 
-	a .material-icons{
+a .material-icons{
+			display: none;
 			position: absolute;
 			position: fixed;
 			bottom: 500px;
 			right: 10px;
 			color: black;
 		}
+

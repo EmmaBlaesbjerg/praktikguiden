@@ -1,0 +1,442 @@
+@charset "utf-8";
+/* CSS Document */
+*, *::before, *::after {
+  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background: white;
+}
+
+/* Her rammes classerne i content diven, så vi kan bygge griddet */
+/* Hvis man tilføjer flere kasser i htmlen - husk derfor at tilføje dem herunder også. */
+.a {grid-area: a;}
+.b {grid-area: b;}
+.c {grid-area: c;}
+.d {grid-area: d;}
+.e {grid-area: e;}
+.f {grid-area: f;} 
+.g {grid-area: g;} 
+.h {grid-area: h;} 
+.i {grid-area: i;} 
+.j {grid-area: j;} 
+.k {grid-area: k;}
+.l {grid-area: l;}
+
+/* ====== */
+/* ============== */
+
+/* Dette er til når skærmen er under 760px, så går vi ned til 1 column til telefon view */
+.content {
+	padding-top: 10px;
+	display: grid;
+	grid-template-columns: 100px 1fr 1fr 20px;
+	grid-auto-rows: auto;
+	grid-gap: 10px;
+	grid-template-areas: 
+		"aside a a"
+		"aside b b"
+		"aside c c"
+		"aside d d"
+		"aside e e"
+		"aside f f"
+		"aside g g"
+		"aside h h"
+		"aside i i"
+		"aside j j"
+		"aside k k"
+		"aside l l";
+		
+}
+/* Her sørger vi får at der kommer 2 columns når skærmen er mindst 760 px stor */
+@media screen and (min-width: 760px){
+.content {
+	display: grid;
+	grid-template-columns: 160px 2fr 2fr 50px;
+	grid-auto-rows: auto;
+	margin: 0 auto;
+	grid-template-areas: /* Hvis der bliver tilføjet flere kasser i html, husk at tilføje i grid-area sektion, og tilføj herunder i grid-template-area også, så der er styr på hvordan det hele ser ud*/
+		"aside a b ."
+		"aside c d ."
+		"aside e f ."
+		"aside g h ."
+		"aside i j ."
+		"aside k l .";
+		
+}
+	}
+
+header {
+  background: white;
+  text-align: center;
+  z-index: 999;
+	
+  width: 100%;
+	box-shadow: 1px 1px 5px 1px grey;
+}
+@media screen and (max-width: 760px) {
+	header {
+		position: fixed;
+	}
+}
+.logo img{
+	height: 80px;
+	width: auto;
+}
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+  outline: 3px solid rgba(lightblue, .75);
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: black;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: white;
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: black;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+	grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+  
+  .logo {
+    grid-column: 2 / 3;
+	 
+  }
+  
+  nav {
+    all: unset;
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    top: initial;
+    left: initial;
+    /* end Edge support stuff */
+    
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+  
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+  
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    bottom: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+  
+  nav a:hover::before {
+    transform: scale(1,1);
+  }
+}
+/* Dette er header billedet */
+.hero-image {
+	background-image: url("../img/application.png");
+	background-size: cover;
+	width: 800px;
+	height: 50vh;
+	resize: both;
+	margin: 0 auto;
+	background-position: right right;
+	background-repeat: no-repeat;
+}
+.hero-h1 {
+	font-size: 5em;
+	position: absolute;
+	top:30%;
+	left:20%;
+}
+@media screen and (max-width: 760px){
+	.hero-image {
+		width: 400px;
+		height: 50vh;
+		background-position: right right;
+		margin: 0 auto;
+	}
+	.hero-h1 {
+		font-size: 3em;
+		top: 50%;
+		left:50%;
+	}
+}
+
+/* Menu kassen der fixed sidder i siden */
+aside {
+	
+	position: fixed;
+	background: #DDDDDD;
+	width: 150px;
+	padding-top: 25px;
+	height: auto;
+	text-align: center;
+	outline: 1px solid gray;
+	box-shadow: 1px 2px 1px 1px gray;
+	line-height: 1.5;
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	
+}
+@media screen and (max-width: 760px){
+	aside {
+		width: 100px;
+		
+	}
+}
+aside a {
+	text-decoration: underline;
+	color: black;
+	font-size: 1em;
+}
+@media screen and (max-width: 450px) {
+	aside a {
+		font-size: 0.75em;
+	}
+}
+/* denne er KUN til at kunne få asiden til at blive absolute */
+.fixedAside {
+	position: absolute;
+	top: 25%;
+}
+/* Dette er blot midlertidigt så man kan se kasserne i content */
+.item {
+	box-shadow: 1px 2px 2px 1px gray;
+}
+
+/* ======== */
+
+/* billederne ved hver sektion */
+.a img, .d img {
+	height: 250px;
+	width: auto;
+}
+@media screen and (max-width: 470px){
+	.a img, .d img {
+		height: 160px;
+		width: auto;
+	}
+}/* ======*/ 
+.item.a, .item.d{
+	text-align: center;
+}
+
+/* CHAT BOTTEN HER */
+/* containeren rundt om chatbot */
+.container {
+	display: none; /* er skjult by default - bliver hentet med javascript */
+    width: 420px;
+    min-height: 450px;
+    border-radius: 1em;
+    box-shadow: 2px 3px 10px black;
+    margin-left: 50px;
+    margin-top: 50px;
+    background: rgba(4,90,223,1.00);
+	position: absolute;
+	right: 50px;
+	bottom: 100px;
+	position: fixed;
+	animation: chatbot 0.7s;
+}
+/* Dette for chatbot til at poppe frem fra 0.5 i scale til 1 i scale */
+@keyframes chatbot {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+		
+		
+/* ====== */ 
+		
+		/* velkommen til praktikguiden */
+		.velkomstTekst {
+			max-width: 300px;
+			margin: 0 auto;
+			color: white;
+			border-bottom: 1px solid grey;
+			padding-bottom: 20px;
+			font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif", sans-serif;
+		}
+		.velkomstTekst h1 {
+			margin: 10px;
+			text-align: center;
+		}
+		/* Selve chatbot delen */
+.box {
+ margin: 0 auto;
+}
+/* maskot billede i chatbot */ 
+.box img {
+	height: 300px;
+	width: auto;
+	position: absolute;
+	
+}
+/* chatbot h1 */
+.box h1 {
+    max-width: 200px;
+    margin: 0 auto;
+    color: white;
+    font-size: 2.5em;
+    letter-spacing: 10px;
+    font-family: 'Pacifico', cursive;
+}
+/* input feltet */
+input {
+    margin-left: 8em;
+    padding: 5px;
+    width: 150px;
+}
+/* submit knappen */
+#submit {
+    padding: 5px;
+}
+/* teksten i chatbot */
+.textbox {
+    max-width: 300px;
+    margin: 10px;
+	margin-left: 6.5em
+}
+#magictekst {
+    padding: .5em;
+    height: auto;
+    min-height: 80px;
+    background: white;
+    border-radius: 1em;
+    padding-top: 10px;
+}
+		/* knappen til chatbot popup */
+		button {
+			background: blue;
+			border: none;
+			cursor: pointer;
+			border-radius: 50%;
+			width: 55px;
+			height: 55px;
+			position: absolute;
+			right: 20px;
+			bottom: 20px;
+			position: fixed;
+		}
+		button .material-icons {
+			vertical-align: middle;
+		}
+
+		/*=====*/
+	
+footer {
+	background: #E1E0DB;
+	height: 150px;
+	margin-top: 40px;
+}

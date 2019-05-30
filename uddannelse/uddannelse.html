@@ -2,12 +2,24 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Uddannelse linje</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studieretning linje</title>
 	<link rel="stylesheet" href="uddannelsestyle.css" type="text/css">
 	<link rel="stylesheet" href="../navigation/navigationstyle.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="../chatbox/chatboxstyle.css"> <!--Chatbox style-->
 	<link rel="stylesheet" href="../footer/footerstyle.css"> <!--Footer-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!-- Google translate - This line adds jquery to the page, otherwise the script tags at the bottom will not run -->
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141004576-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-141004576-1');
+		</script>
 </head>
 
 <body>
@@ -18,11 +30,12 @@
   <input type="checkbox" id="nav-toggle" class="nav-toggle">
   <nav>
     <ul>
+		<a href="../index.html"><img id="hidden-logo" src="../images/logo/logo.png" alt="Logo"/></a>
       <li><a href="../generel/generel.html">Generel information</a></li>
       <li><a href="../motiveret/motiveret.html">Motiveret ansøgning</a></li>
       <li><a href="../legat/legat.html">Legat</a></li>
       <li><a href="../cv/cv.html">Cv</a></li>
-	  <li><a id="stat" href="../uddannelse/uddannelse.html">Uddannelse</a></li>
+	  <li><a id="stat" href="../uddannelse/uddannelse.html">Studieretning</a></li>
     </ul>
   </nav>
   <label for="nav-toggle" class="nav-toggle-label">
@@ -34,7 +47,12 @@
 	<!-- dette er header image -->
 	<div class="hero-image"></div>
 	
-	<!-- selve kasserne med de forskellige uddannelser i -->
+	
+	<!--Forklaring tekst-->
+	<div class="tekst"><div class="tekstov">Studieretninger</div><br><p>For hver uddannelse er der, udover standartkravene, for både den studerende og virksomheden, også nogle specielle krav som hver studieretning stiller.<br>
+	For bedre at kunne tjekke hvilke specielle krav der er specifikt for din studieretning, tjek herunder, ved at valgte din studieretning:<br>
+	</p></div>
+<!-- selve kasserne med de forskellige uddannelser i -->
 	<div class="uddannelses-wrapper">
 		<ul class="main-ul">
 			<li class="main-li"><a class="main-a" href="studieordning.pdf" target="_blank">Datamatiker<i class="material-icons" style="font-size:30px">chevron_right</i></a></li>
@@ -71,7 +89,7 @@
     
 </div>
 	<div class="fixedButton">
-	<button id="chatBotButton"><i class="material-icons" style="font-size:34px;color:white">chat</i></button>
+	<button id="chatBotButton"><i class="material-icons" style="font-size:34px;color:white;bottom:10px;left:10px; ">chat</i></button>
 	</div>
 	<script src="../chatbox/chatboxjava.js"></script>
 	
@@ -83,7 +101,7 @@
 			<!--Venstre side footer-->
 			<div class="footer-left">
 
-				<img src="../images/logo/logo.png" width="175" height="118" alt=""/>
+				<img src="../images/logo/logo.png"  alt=""/>
 
 
 				<p class="footer-company-name">Praktik Guiden &copy; 2019</p>
@@ -119,13 +137,14 @@
 
 				<p class="footer-company-about">
 					<span>Om os</span>
-					PraktikGuiden en en gratisk søgemaskine for al information der er værd vide om virksomhedspraktikforløbet på den uddannelsesinstitution du er tilknyttet.
+					PraktikGuiden en en gratisk søgemaskine for al information der er værd vide om virksomhedspraktikforløbet på det uddannelsesinstitution du er tilknyttet.
 				</p>
 
 
 			</div>
 
 		</footer>
+	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 	
 	
 	<script src="uddannelsejava.js"></script>

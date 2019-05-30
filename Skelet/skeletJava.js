@@ -33,8 +33,9 @@ $(document).on("click", ".toggle-text-button", function() {
 
 
 
+//Fjern pil "til top" ved "forside billede"
 window.addEventListener("scroll",function(){
-  var target = document.getElementsByClassName('sidenav');
+  var target = document.getElementsByClassName('material-icons');
   if(window.pageYOffset > 400){
    target[0].style.display = "block";
   }
@@ -43,7 +44,6 @@ window.addEventListener("scroll",function(){
   }
   }
 );
-
 
 
 

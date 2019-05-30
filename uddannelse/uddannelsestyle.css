@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sacramento&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -41,6 +42,17 @@ header {
 	}
 }
 
+.tekstov{
+	font-family: 'Sacramento', cursive;
+	font-size: 90px;
+}
+.tekst{
+	max-width: 800px;
+			margin: 0 auto;
+			padding-top: 10px;
+			padding-bottom: 100px;
+}
+
 * {
 			padding: 0;
 			margin: 0;
@@ -64,6 +76,7 @@ header {
 		}
 		.main-li {
 			border: 1px solid grey;
+			 border-radius:20px;
 			list-style: none;
 			height: 100px;
 			
@@ -79,9 +92,12 @@ header {
 			
 		}
 		.main-a:hover {
-			color: lightgrey;
+			color: #395861;
 		}
 		.material-icons {
 			position: absolute;
 			bottom: 100;
 		}
+#chatBotButton{
+	bottom: 20px;
+}

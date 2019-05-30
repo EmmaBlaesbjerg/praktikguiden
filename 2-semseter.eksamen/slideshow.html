@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Slide show</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+		/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: white;
+	max-width: 1000px;
+	margin: 0 auto;
+	min-height: 270px;
+}
+		.mySlides > img {
+			height: 150px;
+			width: auto;
+		}
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+		.author {
+			max-width: 500px;
+			margin: 0 auto;
+			font-family: 'Roboto', sans-serif;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width slides/quotes -->
+  <div class="mySlides">
+    <img src="MultimedieDesign/2 Semester/Flow 5 Eksamen - Praktikguiden/billeder til anmeldelser/billede4-final.png">
+    <p class="author">Allerede fra dag 1 havde ’Inspired eLearning’ overgået alle mine forventninger i forhold til en ideel arbejdsplads. Kollegaerne og Managerne sørger virkelig for, at man føler sig hjemme, og sørger for at alle de værktøjer man har brug for, er til rådighed.</p>
+  </div>
+
+  <div class="mySlides">
+    <img src="MultimedieDesign/2 Semester/Flow 5 Eksamen - Praktikguiden/billeder til anmeldelser/billede2.png">
+    <p class="author">Min praktikoplevelse var rigtig god. Chris og hele teamet var skønne og jeg lærte rigtig meget, både personligt og fagligt. Så det må siges at have været en succes.</p>
+  </div>
+
+  <div class="mySlides">
+    <img src="MultimedieDesign/2 Semester/Flow 5 Eksamen - Praktikguiden/billeder til anmeldelser/billede-1.png">
+    <p class="author">Praktikperioden hos ’Grafisk Design Company’ var helt igennem fantastisk, jeg fik meget frie rammer, så jeg kunne udfolde mig så kreativt, som muligt. Både chefen sågar medarbejderne var utrolig professionelle og dygtige!</p>
+  </div>
+	
+	<div class="mySlides">
+    <img src="MultimedieDesign/2 Semester/Flow 5 Eksamen - Praktikguiden/billeder til anmeldelser/beautiful-blur-blurred-background-733872.png">
+    <p class="author">Altså, kaffen var god – men jeg synes desværre, at hele perioden var alt for hektisk, jeg kom i praktik i en periode, hvor de havde ualmindelig travlt, så jeg fik faktisk ikke så meget ud af praktikken, da jeg sad meget selv uden den store mulighed for hjælp. </p>
+  </div>
+	
+		<div class="mySlides">
+    <img src="MultimedieDesign/2 Semester/Flow 5 Eksamen - Praktikguiden/billeder til anmeldelser/billede5.png">
+    <p class="author">Jeg var i praktik hos ’Insight Enterprises’ alle på kontoret var villige til at hjælpe mig igennem hele praktikforløbet </p>
+  </div>
+
+  <!-- Next/prev buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<!-- Dots/bullets/indicators -->
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+</div>
+	
+	<script>
+	var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+		
+
+	</script>
+</body>
+</html>

@@ -905,11 +905,18 @@ top:0%;
   opacity: 1;
   transition: opacity 250ms ease-in-out 250ms;
 }
+#hidden-logo{
+	height: 50px;
+	width: auto;
+}
 
 @media screen and (min-width: 800px) {
   .nave-toggle-label {
     display: none;
   }
+		#hidden-logo{ 
+	display: none; 
+}
 
   header {
     display: grid;

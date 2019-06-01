@@ -11,9 +11,6 @@
 		
 		<!--Navigation links-->	
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
-			
-		
-		
 		
 		<!--Stylingslink-->
         <link rel="stylesheet" type="text/css" href="indexstyle.css"/>
@@ -50,9 +47,6 @@
 		</head>
 	
     	<body>
-			
-				
-	
 
 		<!--Navigation-->
 		<header>
@@ -72,8 +66,6 @@
     <span></span>
   </label>
 </header>
-			
-		
 		
 		<!--Forsidebillede-->
 		<div class="forsideimg"></div>
@@ -83,10 +75,20 @@
     	<div class="scroller"></div>
   		</div>
 		</div>
-			
-	
 		
+		 <div id="myModal" class="modal">
+        <div class="modal-content">
+            <button type="button" class="close" onclick="document.getElementById('Video').pause();">x</button>
+            <div class="fullscreen-video-wrap">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/l65ARVHmiww" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
 		<!--Om os-->
+		
 		<div class="blockquote-wrapper">
   		<div class="blockquote">
     	<h4>
@@ -174,7 +176,7 @@
 		</div>
 
         
-	
+		
 		<!-- Footer -->
 		<footer class="footer-distributed">
 			<!--Venstre side footer-->
@@ -188,7 +190,9 @@
 
 			<!--midterste footer-->
 			<div class="footer-center">
-
+					<section id="modal">
+                <button id="WatchAgain">Click to watch video again</button>
+            </section>
 				<p class="footer-links">
 				
 				<div>
@@ -331,9 +335,41 @@
 				*/
 			
 			});
+			var whatToClose = 0;
+        var span = document.getElementsByClassName("close")[0];
+        var modal = document.getElementById('myModal');
+        var btn = document.getElementById("WatchAgain");
+
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+
+            }
+        }
+         
+        let modalPopUp = false
+        window.addEventListener("scroll", function () {
+
+                let = document.getElementById('myModal');
+
+                if (window.pageYOffset > 300 && !modalPopUp) {
+                    modalPopUp = true
+                    myModal.style.display = "block";
+                }
+
+
+        });
 		</script>
-	
-	
+		
 		
 		
 	</body>

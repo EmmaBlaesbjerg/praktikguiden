@@ -71,6 +71,8 @@ background-position: center 80px;
   100% { transform: translateY(15px); opacity: 0;}
 }
 
+
+
 /*Om os*/
 /* center the blockquote in the page */
 .blockquote-wrapper {
@@ -986,6 +988,7 @@ top:0%;
 	position: absolute;
     top: 3000px;
 	bottom: auto;
+	border-top: 1px black solid;
 }
 @media screen and (max-width: 660px) {
 	.footer-distributed{

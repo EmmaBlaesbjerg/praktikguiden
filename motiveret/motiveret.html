@@ -7,8 +7,10 @@
 		<meta name="Keywords" content="praktik, praktikguiden, motiveret ansøgning, titel, personlige oplysnigner, interesser">
 	<meta name="description" content="PrasktikGuiden giver information om hvordan og hvad en motiveret ansøgning skal indeholde når der søges et praktikophold" />
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!-- Google translate - This line adds jquery to the page, otherwise the script tags at the bottom will not run -->
+	
+	<link rel="stylesheet" href="../banner/bannerstyle.css"> <!--banner style-->
 	<link rel="stylesheet" href="../chatbox/chatboxstyle.css"> <!--Chatbox style-->
-	<link rel="stylesheet" href="motiveretstyle.css" type="text/css"><!--Legat style-->
+	<link rel="stylesheet" href="motiveretstyle.css" type="text/css"><!--style-->
 	<link rel="stylesheet" href="../Skelet/skeletStyle.css"><!--Skeletstyle-->
 	<link rel="stylesheet" href="../navigation/navigationstyle.css"><!--Navigsation-->
 	
@@ -59,8 +61,22 @@
 	<!-- dette er header image -->
 	<div class="hero-image"></div>
 	<br><br>
+
 	
-	<!-- Dette er den fixed menu bar ude i siden -->
+		<!--Banner-->
+	<div id = "divToShowHide" class = "BeforeScroll">
+	<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      <div class="slideshow-container">
+    <div name="slides" class="mySlides fade"> <img id="slideImage" src="../images/Generel/generel-illustrationer/huske_sedler.png" alt="Banner"> </div>
+  </div>
+      <div class="BannerContent"> 
+    <h3>PraktikGuiden</h3>	
+	<h4>Husk at tjekke, hvordan du skriver dit CV!</h4> 
+  </div>
+    </div>
+	<script src="../banner/bannerjava.js"></script>
+
+<!-- Dette er den fixed menu bar ude i siden -->
 	<div class="fixedAside">
 	<aside>
 		
@@ -101,8 +117,8 @@
     <a href="#6.3">3. Find ud af mere om virksomheden</a>
 	  <a href="#6.4">Deres navn og kontaktoplysninger</a>
 	  <a href="#6.5">Navnet på det job, du søger</a>
-	  <a href="#3.6">Et resumé af hvorfor du har ret til jobbet</a>
-	  <a href="#3.7">Tal deres sprog</a>
+	  <a href="#6.6">Et resumé af hvorfor du har ret til jobbet</a>
+	  <a href="#6.7">Tal deres sprog</a>
   </div>
 	
 	<button class="dropdown-btn"><a href="#7">Motiveret ansøgning, når der ikke annoceres noget job</a>
@@ -110,11 +126,11 @@
 		<div class="dropdown-container"> </div>
  
 		
-	<button class="dropdown-btn"><a href="#8">Gode råd</a>
+	<button class="dropdown-btn"><a href="#7">Gode råd</a>
   </button>
 		<div class="dropdown-container"> </div>
   
-		<button class="dropdown-btn"><a href="#9">5 Gode Råd</a>
+		<button class="dropdown-btn"><a href="#9">5 Hurtige tips</a>
   </button>
 		<div class="dropdown-container"> </div>
 	
@@ -148,7 +164,7 @@
 		
 		<!--Den motiverede ansøgning-->
 		<div class="item b">
-		<h2 id="1">Den motiverede ansøgning</h2>
+		<h2 id="0">Den motiverede ansøgning</h2>
             <p>Den motiverede ansøgning er din bedste mulighed for positivt at skille dig ud fra de andre ansøgere samt sætte dit personlige fingeraftryk på din ansøgning. Blandt CV, budgetter og årsopgørelser får du muligheden for med egne ord at beskrive, hvorfor du gerne vil modtage støtte til dit projekt eller den rette praktikplads.
 			</p>
 		</div>
@@ -156,7 +172,7 @@
 
 		<!--Sådan skriver du en god motiveret ansøgning-->
 		<div class="item c">
-		<h2 id="2">Sådan skriver du en god motiveret ansøgning</h2>
+		<h2 id="1">Sådan skriver du en god motiveret ansøgning</h2>
             <p>Fonde og legater, samt praktikpladser lægger i forskellig grad vægt på den motiverede ansøgning. Nogle vægter den forholdsvis højt, andre i mindre grad. 
 			Men skriv dig en ting bag øret: Hvis en fond eller et legat er i tvivl, om du skal have en legatportion eller ej, så er det ofte motivationen, der skubber dem til den ene eller den anden side.
 
@@ -171,7 +187,7 @@
 		
 		<!--Titel og introduktion-->
 		<div class="item e">
-		<h2 id="4">Titel og introduktion</h2>
+		<h2 id="2">Titel og introduktion</h2>
             <p>Lav en beskrivende og fængende titel til din ansøgning, så fonds- eller legatadministratoren og praktokpladsen hurtigt får et overordnet indtryk af, hvad ansøgningen handler om. Introducer dig selv og beskriv, hvad dit projekt handler om. Introduktionen skal være ganske kort og overbliksskabende.</p>
 			
 		</div>
@@ -179,7 +195,7 @@
 		
 	  	<!--Præsentation-->
 		<div class="item f">
-		<h2 id="5">Præsentation</h2>
+		<h2 id="3">Præsentation</h2>
             <p>Vis hvem du er gennem din fortælling om dig selv som engageret og dygtig inden for netop dit felt. Uddyb gerne din beskrivelse med eksempler, der illustrerer dine relevante faglige og personlige kompetencer. Fortæl om relevant erhvervserfaring, dit særlige engagement i dit projekt eller de fag, som vedrører eksempelvis dit studieophold i udlandet. Giv et godt indtryk af dig selv ved at gøre din ansøgning personlig, men ikke privat.</p>
 			
 		</div>
@@ -189,7 +205,7 @@
 	  	<!--"Formål-->
 		<div class="item h">
 			
-			<h2 id="6">Formål</h2>
+			<h2 id="4">Formål</h2>
             <p>Beskriv formålet med dit projekt, så fonds- og legatadministratoren eller praktikpladsen kan se, at deres eventuelle støtte vil gøre en forskel. Hvis du eksempelvis skal på et studie- eller praktikophold i udlandet, så beskriv hvilke personlige og faglige færdigheder, som du forventer at få ud af udlandsopholdet. Her må du gerne være konkret og tale om et specifikt fag eller specifikke aktiviteter, som du ønsker at deltage i. Det kan eksempelvis være at du skal besøge FN, mens du er i New York, og at du her kan udbygge dit professionelle netværk. Du kan også have planer om at lave frivilligt socialt arbejde under dit studieophold i Kina. Forklar, hvorfor du ønsker at rejse til det pågældende land og studere eller tage et praktikophold netop der. Det illustrerer, at du har et klart formål med studie- eller praktikopholdet, at du har forberedt dig godt, og at du har foretaget motiverede valg.</p>
 			
             <p class="toggle-text">
@@ -204,7 +220,7 @@
 		
 	  	<!--"Målret ansøgning-->
 		<div class="item i">
-		<h2 id="7">Målret din motiverede ansøgning</h2>
+		<h2 id="5">Målret din motiverede ansøgning</h2>
             <p>Sæt dig grundigt ind i fondens eller legatets uddelingspraksis og støtteområder, så du kan vise, at din ansøgning er relevant for fonden eller legatet. Redegør for, hvordan du opfylder kriterierne. Det kan eksempelvis være en god ide at tage afsæt i en eller to formuleringer fra fondens eller legatets beskrivelse af støtteområdet og skrive om dem med dine egne ord i ansøgningen. Beskriv levende og med afsæt i det faglige eller det personlige, hvorfor det netop er dig, der skal have din drøm opfyldt.<br><br></p>
 			
             <p class="toggle-text">
@@ -222,135 +238,78 @@
 		<div class="item j"><img src="../images/Motiveret ansøgning/ansøgning-illustrationer/kalender_motiveretansøgning.png" /></div>
 		
 		<!--Match-->
-		<div class="item 11 k">
+		<div class="item k">
 		
-		<h2 id="8">Matcher din motiveret ansøgning</h2>
+		<h2 id="6">Matcher din motiveret ansøgning</h2>
             <p>Brug et andet følgebrev til hvert job, du ansøger om. Dit brev skal vise, at du ved, hvad jobbet indebærer, og hvad arbejdsgiveren søger.<br><br>
 
 			For at gøre dette skal du være specifik om dine evner og kvaliteter. Du skal også vise, hvordan de passer til jobbets eller organisationens behov.
 			</p>
-			
-		</div>
-		
-		<!--adrex dit brev-->
-		<div class="item 12 l">	
-			<h2 id="9">Prøv ikke at adressere dit brev "Til hvem det kan vedrøre".</h2><p> Find ud af navnet på den person, der vil læse din ansøgning. Det kan tage lidt arbejde, men det er det værd.<br><br>
+			 <p class="toggle-text">
+				 <br><br>
+				<span id="6.1"><strong>1. Find ud af hvem brevet skal adresseres til.</strong></span> <br>Find ud af navnet på den person, der vil læse din ansøgning. Det kan tage lidt arbejde, men det er det værd.<br><br>
 
 		Hvis du fandt jobbet i en annonce, vil det sandsynligvis navnet en person til at sende ansøgningen til. Hvis det ikke gør det, ring til arbejdsgiveren eller annoncøren og spørg, hvem der skal sende ansøgningen til. Telefonen er bedst, men e-mail dem, hvis du ikke kan finde et telefonnummer til kontaktpersoner.<br><br>
 
 		Hvis du finder ud af personens navn, skal du ikke bruge deres fornavn. Brug enten 'Hr' eller Fr' og deres efternavn i stedet.<br><br>
-		</p>
+				<br> 
+				 
+				 <span id="6.2"><strong>2. Find ud af mere om jobbet</strong></span><br>
+            Når du finder ud af, hvem der skal adressere din ansøgning til, kan du også prøve at kontakte den pågældende person, så du kan stille spørgsmål. Dette kan hjælpe dig med at matche dit følgebrev (og genoptage) til jobbet.
 			
-			
-		</div>
-
-
-		<div class="item m"><img src="../images/Motiveret ansøgning/ansøgning-illustrationer/computer_coffe_ansøgning.png"/></div>
-
-		<!--find emre om jobbet-->
-		<div class="item n">
-		<h2 id="10"> Find ud af mere om jobbet</h2>
-            <p>Når du finder ud af, hvem der skal adressere din ansøgning til, kan du også prøve at kontakte den pågældende person, så du kan stille spørgsmål. Dette kan hjælpe dig med at matche dit følgebrev (og genoptage) til jobbet.</p>
-			
-            <p class="toggle-text">
+            
 				
 			Du kan spørge:<br><br>
 
-			•	Består jobbet iat arbejde som en del af et hold?<br>
+			•	Består jobbet i at arbejde som en del af et hold?<br>
 			•	Hvem vil jeg rapportere til, hvis jeg fik jobbet?<br>
 			•	Kan du fortælle mig mere om den slags person, du leder efter?<br>
 			•	Er der en positionsbeskrivelse, jeg kan se på? (Spørg kun dette, hvis jobannonce ikke nævner en positionsbeskrivelse.)<br>
 			Bemærk svarene på disse spørgsmål, som de kan bruges i dit følgebrev<br><br>
-
-
-				</p><a class="toggle-text-button">Læs mere</a>	
 		
-		</div>
-
-		<!--Find ud af mere om virksomheden-->
-		<div class="item o">
-		<h2 id="11">Find ud af mere om virksomheden</h2>
-            <p>Få mere at vide om virksomheden, så du kan skræddersy dit følgebrev til jobbet. Her er nogle tips:<br><br>
+				<br>
+				 <span id="6.3"><strong>3. Find ud af mere om virksomheden</strong></span><br>
+            Få mere at vide om virksomheden, så du kan skræddersy dit følgebrev til jobbet. Her er nogle tips:<br><br>
 
 			•	Hvis du kender firmaets navn, skal du søge information online.<br>
 			•	Hvis virksomheden har en hjemmeside, skal du besøge den (især deres 'Om os' side).<br>
 			•	Hvis virksomhedsnavnet ikke er i reklamen, skal du ringe til ansættelsesbureauet eller annoncøren og spørge, hvem arbejdsgiveren er.<br>
-			</p>
-			
-		
-		</div>
-
-		<div class="item p"><img src="../images/Motiveret ansøgning/ansøgning-illustrationer/clock_motivated_ansøgning.png"/></div>
-
-		<!--Kontaktoplydnigner-->
-		<div class="item q">
-		<h2 id="12">Kontaktoplysninger</h2>
-            <p>Under dit eget navn og kontaktoplysninger skal du inkludere:<br>
+			<br><br>
+				 
+				 <span id="6.4"><strong>Deres navn og kontaktoplysninger</strong></span><br>
+            Under dit eget navn og kontaktoplysninger skal du inkludere:<br>
 			•	navnet på den person, du skriver til<br>
 			•	deres stilling eller navnet på deres firma<br>
 			•	deres kontaktoplysninger<br><br>
 
 			Hvis du har problemer med at finde disse oplysninger, kan du ringe til firmaet for at spørge, hvem du skal henvende dig til din ansøgning til.
 			Du kan også bruge 'Til hvem det kan vedrøre', men det er bedst kun at bruge dette som en sidste udvej.<br><br>
-</p>
-			
-            <!--<p class="toggle-text">
-				
-				</p><a class="toggle-text-button">Read More</a>	-->
-		
-		
-		
-		</div>
-
-		<!--stillinger-->
-		<div class="item r">
-			<h2 id="13">Stillingen du ansøger om</h2>
-            <p>I begyndelsen af dit brev skal du sige hvilket job du ansøger om.
+			<br><br>
+				 
+				 <span id="6.5"><strong>Stillingen du ansøger om</strong></span><br>
+            I begyndelsen af dit brev skal du sige hvilket job du ansøger om.
 			Du kan gøre dette på en linje af sig selv (for eksempel 'vedrørende: ansøgning om lagerstyringsposition').
 			Du kan også gøre dette i åbningsafsnittet (for eksempel, "Jeg skriver for at ansøge om den nyligt annoncerede lagerkontrolposition".)
-			</p>
-			
-           <!-- <p class="toggle-text">
+			<br><br>
 				
-				</p><a class="toggle-text-button">Read More</a>	-->
+			<span id="6.6"><strong>Et resumé af hvorfor du har ret til jobbet</strong></span><br>
+            Efter at have noteret dine færdigheder og erfaringer, bør du forklare, hvorfor det betyder, at du er egnet til jobbet (f.eks. "Min evne til at komme sammen med alle og min erfaring med at løse kundeproblemer i en detailindstilling gør mig ideel til dette job . «)
 			
-			</div>
-
-		<div class="item s"><img src="../images/Motiveret ansøgning/ansøgning-illustrationer/lamp_coffe_motiveret_ansøgning.png"/></div>
-
-		<!--"Resume-->
-		<div class="item t">
-			<h2 id="14">Et resumé af hvorfor du har ret til jobbet</h2>
-            <p>Efter at have noteret dine færdigheder og erfaringer, bør du forklare, hvorfor det betyder, at du er egnet til jobbet (f.eks. "Min evne til at komme sammen med alle og min erfaring med at løse kundeproblemer i en detailindstilling gør mig ideel til dette job . «)
-			</p>
-			
-           <!-- <p class="toggle-text">
-		
-				</p><a class="toggle-text-button">Read More</a>	-->
-		
-		</div>
-	
-	
-		<!--tal deres sprog-->
-		<div class="item u">
-			<h2 id="15">Tal deres sprog</h2>
-            <p>At bruge det samme sprog som personer, der gør et bestemt job, viser, at du forstår den branche eller det felt, som arbejdsgiveren arbejder i.
+			<br><br>
+			<span id="6.7"><strong>Tal deres sprog</strong></span><br>
+            At bruge det samme sprog som personer, der gør et bestemt job, viser, at du forstår den branche eller det felt, som arbejdsgiveren arbejder i.
 			Find ud af hvad arbejdsgiveren gør, og hvordan de snakker om sig selv. Brug dette sprog i dit følgebrev.
 			For eksempel, hvis der er et værktøj eller software eller færdigheder, som jobbet kræver, skal du nævne det i dit følgebrev, som forarbejdningsværktøjer eller kontanthåndtering (men sørg for at du nævner det korrekt!).
-
-			</p>
+ 
+				 </p><a class="toggle-text-button">Læs mere</a>	
 			
-           <!-- <p class="toggle-text">
-		
-				</p><a class="toggle-text-button">Read More</a>	-->
-		
 		</div>
-			
-		<div class="item v"><img src="../images/Motiveret ansøgning/ansøgning-illustrationer/papir_arbejde_motiveret-ansøgning.png"/></div>
+		
+
 		
 		<!--"ingen annoce-->
-		<div class="item w">
-			<h2 id="16">Motiveres ansøgning, når der ikke annonceres noget job</h2>
+		<div class="item l">
+			<h2 id="7">Motiveres ansøgning, når der ikke annonceres noget job</h2>
             <p>Denne tilgang kaldes ofte kaldt koldt opkald. Koldt opkald er, når du kommer i kontakt med en arbejdsgiver for at spørge om de har ledige stillinger.
 			Koldt opkald hjælper dig med at opdage uannoncerede job. Uannoncerede job kan udgøre en betydelig del af jobmulighederne.
 			Koldopkald viser også arbejdsgiveren, at du har initiativ og entusiasme. Selv Hvis der ikke findes noget arbejde i øjeblikket, kan arbejdsgiveren beholde din ansøgning på fil. De kan kontakte dig, når arbejdet bliver tilgængeligt.
@@ -372,10 +331,12 @@
 		
 		</div>
 		
+		<div class="item m"><img src="../images/Motiveret ansøgning/ansøgning-illustrationer/computer_coffe_ansøgning.png"/></div>
+		
 		
 		<!--Gode råd-->
-		<div class="item x">
-			<h2 id="17">Gode råd</h2>
+		<div class="item n">
+			<h2 id="8">Gode råd</h2>
             <p>	•	Max. 1 side: En god motiveret ansøgning skal 		maksimalt fylde én side.<br><br>
  
 				•	Tænk på sprogbrug: Sproget skal naturligvis være let forståeligt, men derudover så tænk på at få mere omkring ’Du/I’, ’Virksomhedens navn’, ’Branchen’ og ’Afdelingen’ med i ansøgningen, og få luget lidt ud i ’Jeg’, ’Mig’, ’Mine’ & ’Mit’. På den måde får du skrevet mere direkte til virksomheden og får rettet dit fokus mod deres behov.<br><br>
@@ -406,11 +367,11 @@
 		
 		</div>
 		
-		<div class="item y"><img src="../images/Motiveret ansøgning/ansøgning-illustrationer/book_row_.png"/></div>
+		
 		
 		<!--"5 tips-->
-		<div class="item z1">
-			<h2 id="18">5 hurtige tips</h2>
+		<div class="item o">
+			<h2 id="9">5 hurtige tips</h2>
             <p>	•	Hold motivationen på en enkelt A4-side<br><br>
 
 				•	Brug papir i A4-format. Andre formater er irriterende for fonds- eller legatadministratoren, der skal gennemgå mange hundrede eller mange tusinde ansøgninger<br><br>
@@ -431,12 +392,14 @@
 				</p><a class="toggle-text-button">Læs mere</a>
 		
 		</div>
+		
+		<div class="item p"><img src="../images/Motiveret ansøgning/ansøgning-illustrationer/book_row_.png"/></div>
 			
 		
 		<!--step by step-->
-		<div class="item z2">
-			<h2 id="19">Step by step guide</h2>
-            <p>	1. Brug en professionel overskrift
+		<div class="item q">
+			<h2 id="10">Step by step guide</h2>
+            <p id="10.1">	1. Brug en professionel overskrift
 				Overskriften til hver motiveret ansøgning til en ansøgning skal følge reglerne for formelle forretningsbrev og indeholde følgende:<br><br>
  
 				•	Dit navn<br>
@@ -471,7 +434,7 @@ Bare husk at holde det professionelt:<br><br>
 
 Pro Tip: Skrivning af en motiveret ansøgning uden navn på ansættelseslederen? I adressefeltet skrives så afdelingens navn: for eksempel "XYZ salgsafdeling."<br><br>
 
-
+<span id="10.2">
 2. Åbn dit brev med en ordentlig hilsen<br><br>
 
 Hvem adresserer du et brev til?<br><br>
@@ -496,8 +459,8 @@ Se et eksempel på de eksempler, hvor du kan henvende dig til hilsner:<br><br>
 •	Kære Ansættelsesleder,<br>
 •	Kære [XYZ Company] Team,<br>
 •	Til hvem det måtte vedrøre.<br>
-
-
+</span>
+<span id="10.3">
 3. Skriv et fangende åbningsafsnit<br><br>
 			   
 Åbningslinjen i din ansøgning afgør, om ansættelseslederen vil læse videre.<br>
@@ -521,8 +484,8 @@ KORREKT<br>
 Det er svaret på dette følgebrev første afsnit vil bringe.<br><br>
  
 Der er et par forskellige effektive strategier til åbning af dit brev. Du kan fremhæve dine præstationer, vise, hvor godt du kender din fremtidige arbejdsgiveres behov eller basere introen på din entusiasme.<br><br>
-
-
+</span>
+<span id="10.4">
 4. Forklar hvorfor du er den ideelle kandidat<br><br>
 
 Hvad skal man skrive i et brevbrevs andet afsnit?<br><br>
@@ -530,8 +493,8 @@ Hvad skal man skrive i et brevbrevs andet afsnit?<br><br>
 Du skal fortælle/vise ansættelseslederen præcis, hvad hun leder efter. Du skal vise, at du vil tilfredsstille de fleste jobkrav - virksomhedens specifikke behov.<br><br>
  
 I den første sætning viser du at du er ekspert på dit område, men bliv ikke ved med at være grådig. Den resterende del af dit brevbrevs andet afsnit skal dreje sig om, hvordan dine tidligere erfaringer vil hjælpe din fremtidige potentielle arbejdsgiver med at presse videre med deres planer.<br><br>
-
-
+</span>
+<span id="10.5">
 5. Fortæl dem, hvorfor du er ivrig efter at blive med<br><br>
 
 Dine fremtidige arbejdsgivere har behov. Hvis de er villige til at ansætte dig, er det fordi de tror, at du vil tilfredsstille disse behov.<br><br>
@@ -547,8 +510,8 @@ Her er den nemmeste måde at gøre det på:<br><br>
 •	Gentag at din erfaring og viden vil give dig mulighed for at lykkes med projektet (3)<br><br>
 
 Pro Tip: Hvor lang skal en motiveret ansøgning være? Generelt er relevante og korte ansøgninger bedst. Tre afsnit maks. Ansøgningen bør ikke overstige 300 ord.<br><br>
-
-
+</span>
+<span id="10.6">
 6. Lav dit tilbud i afslutningsafsnittet<br><br>
 
 Fortæl arbejdsgiveren, at du glæder dig til at møde personligt og diskutere, hvordan din erfaring og viden kan hjælpe din fremtidige arbejdsgiver med at opfylde deres mål.<br><br>
@@ -561,8 +524,8 @@ To værste fejl du kan lave i sidste afsnit er:<br><br>
  
 1.	Kommer ud af trængende - fokuserer på, hvor meget du vil have jobbet, ikke på hvad du har at tilbyde.<br>
 2.	Gentag den kliche sætning "Tak for din overvejelse og din tid."<br>
-
-
+</span>
+<span class="10.7">
 7. Brug den rigtige formelle lukning<br>
 Skriv "Hilsen" og følg det med dit fulde navn. Tilføjelse af din håndskrevne underskrift er valgfri, men det anbefales til mere formelle omslagsbrev.<br><br>
  
@@ -584,7 +547,8 @@ Kig på nogle alternative ansøgnings lukninger:<br><br>
 •	Respektive din.<br><br>
  
 Pro Tip: Det er en god ide at gentage dine grundlæggende kontaktoplysninger, f.eks. Din LinkedIn-profil, e-mailadresse og telefonnummer under din tilmelding.<br><br>
-
+</span>
+<span id="10.8">
 8. Sådan skriver du et godt omslagstavle Postscript<br><br>
 
 Alle ovenstående sektioner er must-haves i en god ansøgning.<br><br>
@@ -597,7 +561,7 @@ Fordi det er som en magnet til ansættelseslederens øjne. Det råber: "Du kan i
 
  
 ”PS: - Jeg vil også værdsætte muligheden for at vise dig (2), hvordan mine e-detailing-løsninger voksede det samlede salg af tre ABC-flagskibsprodukter med en rekordbrud på 13% på et år (1). "<br><br>
-
+</span>
 
 				</p><a class="toggle-text-button">Læs mere</a>
 		
@@ -607,7 +571,6 @@ Fordi det er som en magnet til ansættelseslederens øjne. Det råber: "Du kan i
 		
 	
 	</div>
-
 	<!--Pil til top-->
 	<a href="#"><i class="material-icons" style="font-size:40px">arrow_upward</i></a>
 

@@ -1,3 +1,115 @@
 @charset "UTF-8";
 /* CSS Document */
 
+/* Slideshow container */
+.slideshow-container {
+    max-width: 200px;
+    position: relative;
+    margin: auto;
+}
+.active {
+    background-color: #717171;
+}
+/* Fading animation */
+.mySlides {
+    -webkit-animation-name: slide;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+ @-webkit-keyframes slide {
+ 0% {opacity: 0.4}
+100% {opacity: 1}
+}
+ @keyframes slide {
+0% {opacity: 0}
+50%{opacity: 0.8}
+100% {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+.text {
+    font-size: 11px
+}
+}
+.BannerContent {
+    animation-name: bannercontent;
+    animation-duration: 1s;
+    /*background: white;*/
+    width: 135px;
+    height: 110px;
+    
+}
+h3 {
+	font-weight: 900;
+	position: absolute;
+	top:20%;
+	left: 13%;
+	font-size: 1.35em
+}
+h4 {
+	font-weight: 900;
+	position: absolute;
+	top:30%;
+	left: 7%;
+    margin-top: 15px;
+    text-align: center;
+}
+.BeforeScroll {
+    animation-name: banner-move;
+    animation-duration: 2s;
+  
+    background-size: cover;
+    width: 150px;
+    height: 130px;
+    position: fixed;
+    border: 1px solid white;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 3px 7px 8px #A7A7A7;
+    display: none;
+}
+
+
+/*Dette funktion gør at banneret bevæger sig*/
+@keyframes banner-move {
+ 0% {
+transform: translate(200px, 0px)
+}
+ 100% {
+transform: translate(0px, 0px)
+}
+}
+/*Use this class when you want your content to be shown after some scroll*/
+.AfterScroll {
+	z-index: 1;
+    animation-name: banner-move;
+    animation-duration: 2s;
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    outline: 1px solid white;
+    bottom: 300px;
+    right: 30px;
+    box-shadow: 3px 7px 8px #A7A7A7;
+    display: block;
+}
+	.closebtn {
+  	z-index: 0;
+	color: black;
+	font-size: 40px;
+	cursor: pointer;
+	font-weight: bold;
+}
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: grey;
+}
+
+#slideImage{
+	width: 200px;
+	height: auto;
+	opacity: 0.5;
+}
+

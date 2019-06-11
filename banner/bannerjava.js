@@ -5,6 +5,7 @@ function startSlide(){
 	if(!hasScrolled){
 		   hasScrolled = true;
 	   setInterval(function() {
+		   let images = ["../images/Motiveret ansøgning/ansøgning-illustrationer/ansøgnings_papir_motiveretansøgning.png", "../images/Motiveret ansøgning/ansøgning-illustrationer/lamp_coffe_motiveret_ansøgning.png","../images/Motiveret ansøgning/ansøgning-illustrationer/computer_coffe_ansøgning.png"]
 		
 		  document.getElementById("slideImage").src = images[slideIndex]
 		   slideIndex++
